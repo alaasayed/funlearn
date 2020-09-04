@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>TGame</title>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+</head>
+<body>
+<div class="container">        
+<button><a href="./">عودة</a></button>
+<input  type="date" value="@model.mycurrdate" name="currdate" />
+<li>
+      
+ الاخطاء       
+
+و
+التنبيهات           
+
+</li>
+@model.arr7.forEach(function(ijk6){
+<li>
+
+@ijk6.error7
+
+
+@ijk6.alert7
+</li>
+})
+<form action="/p6n" method="post" >
+<li>
+
+المفترض 
+ و 
+ما تم
+
+</li>
+<li>
+<input    type="text" name="req7" value="req7" />
+<input  type="text" name="done7" value="done7" />         
+</li>
+<li>
+الاخطاء     
+و
+التنبيهات
+
+</li>
+<li>
+<input type="text" name="error7"  />
+<input type="text" name="alert7" />
+<input type="submit"  />
+</li>
+</form>
+<a download="Tgame" href="./../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+        <title>
+    TGame
+        </title>
+    </head>
+    <body  class="container">
+          <button><a href="./">عودة</a></button>
+
+      <h3>قل:</h3>
+      <h3 id="lblqt" > @model.qv.qtext </h3>
+       <button  id="start11">ابدأ
+  </button>
+  <div>
+  انت قلت:
+  </div>
+<div  class="output"></div>
+<form action="/p2" method="post">
+<input type="text" style="display:none;"   name="word1"/>
+<input type="submit"  value="<<التالي>>"  />
+</form>
+<div id="yans"></div>
+</div>
+<script>
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+</script>
+<script src="./../jsdir/stt.js" />
+<script>
+var diagnostic = document.querySelector('.output');
+var io1 = document.getElementByName('word1');
+io1.setAtrribute('value',diagnostic.innerHTML);
+</script>
+
+</body>
+</html>

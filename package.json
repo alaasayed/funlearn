@@ -1,0 +1,41 @@
+{
+  "name": "tajweedgame",
+  "version": "1.0.0",
+  "description": "a web app provide tajweed lessons ,practices with voice ,azkar,table to tackle revision of the holy quran. ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "testsrc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "alaasayed"
+  },
+  "keywords": [
+    "azkar",
+    "game",
+    "tajweed",
+    "practice",
+    "quran",
+    "audio",
+    "voice",
+    "to",
+    "text",
+    "table",
+    "note"
+  ],
+  "author": "ASS with some Devs",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/speech": "^3.6.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "node-audiorecorder": "^2.2.0",
+    "node-record-lpcm16": "^1.0.1",
+    "npm": "^6.14.5",
+    "record": "^0.2.0",
+    "vash": "^0.13.0",
+    "yargs": "^15.4.1"
+  }
+}

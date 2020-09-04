@@ -1,0 +1,191 @@
+<html>
+<head>
+        <title>اذكار</title>
+       
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+
+        <script  src="../bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js"/>        
+
+        <link  rel="stylesheet"  href="../bootstrap-3.4.1-dist/css/bootstrap.css"/>        
+        <script  src="../bootstrap-3.4.1-dist/js/bootstrap.min"/>        
+
+</head>
+        <body>   
+          <button><a href="./">عودة</a></button>
+
+          <script>
+           
+
+ var arrca=[
+'ca0.jpg',
+'ca1.jpeg',
+'ca2.jpeg',
+'ca3.jpeg',
+'ca4.jpeg',
+'logo.png',
+'s1.png'
+]
+;
+var arrn=[
+'nm1.png',
+'nm10.png',
+'nm11.png',
+
+ 'nm2.png',
+'nm31.png',
+'nm32.png',
+ 'nm33.png',
+'nm5.png',
+'nm51.png',
+'nm6.png',
+ 'nm7.png',
+'nm8.png',
+'nm81.png',
+'nm9.png'
+,
+'n11.png',
+'n12.png',
+'n6.png'
+];
+
+
+
+
+$(document).ready(function(){
+
+ for(i=0;i<arrn.length;i++)
+ $("#nahar").find('.item').children('img').eq(i).attr('src','./../imgsdir/'+arrn[i]);
+
+
+
+$(".prev-slide").click(function(){
+$("#mycn").carousel('prev');
+
+});
+
+$(".next-slide").click(function(){
+    $("#mycn").carousel('next');
+    
+    });
+            
+});
+s =0;
+nahar=true;
+ 
+function  countinc()  {
+    s++;
+    document.getElementById("lbls").innerHTML=s;
+   }
+
+  function resetcount (){
+    s=0;
+    document.getElementById("lbls").innerHTML=s;
+    
+    } 
+            
+      </script>
+     
+     <style>
+     
+     .container{
+background-image: url("./../imgsdir/bgr.png");
+background-repeat: no-repeat;
+margin:11px;
+padding:11px;
+}
+
+     </style>
+          <div class="container">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+    <a href="./p4">احصائيات</a>  
+    <a href="./p5nn">اذكار المساء</a>  
+    <a href="./">الدروس</a>  
+    
+    <div  id="nahar" name="nahar"  class="ion-float-right ion-padding">
+      <label  > اذكار النهار</label>
+<div id="mycn" class="carousel slide" > 
+      <div    class="carousel-inner">
+    <div class="item active">
+    <img   style="width:100%;"   src="imgsdir/nm1.png"  />
+    </div>
+    
+    <div class="item">
+    <img   style="width:100%;"    src="imgsdir/nm2.png"   />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"    src="imgsdir/nm31.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm32.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm33.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"    src="imgsdir/nm5.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"    src="imgsdir/nm6.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm7.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm8.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm9.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;" src="imgsdir/nm10.png"   />
+    </div>
+    <div class="item">
+    <img   style="width:100%;" src="imgsdir/nm11.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;" src="imgsdir/nm51.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/nm81.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/n11.png"  />
+    </div>
+    <div class="item">
+    <img   style="width:100%;"   src="imgsdir/n6.png"  />
+    </div>
+    <div class="item ">
+    <img   style="width:100%;"   src="imgsdir/n12.png"  />
+    </div>
+    </div>
+
+
+    <a class="carousel-control left" href="#mycn"  data-slide="prev">
+      &lt;&lt;==
+      </a>
+      
+      <a class="carousel-control right" href="#mycn"  data-slide="next">
+              ==&gt;&gt;
+              </a>
+</div>          
+</div>
+        <ul class=" ion-float-right">
+          <li>
+          <label   >تسبيح</label>
+        </li>
+        <li>          <label >وصلت الي: </label>
+          <label  id="lbls" >0</label> 
+        </li>
+        <li>     
+            <button  onclick="countinc();">زد</button>
+          
+          </li> <li>
+            <button  onclick="resetcount();">ابدأمن جديد</button>
+          </li>
+      </ul>
+    </div>
+    </body>
+    
+    </html>

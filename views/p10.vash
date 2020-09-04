@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>سؤال</title>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+</head>
+<body  class="container">
+          <button><a href="./">عودة</a></button>
+
+<h3>ضع في المكان الصحيح بالاختيار</h3>
+<h2>@model.qv.q</h2>
+
+<div>
+<button  id="b0">@model.qv.q0</button>
+</div>
+<div>@model.qv.q10</div>
+<div>
+<button  id="b1">@model.qv.q1</button>
+</div>
+
+<form action='/p10' method='POST'>
+<input  id="s8" style="display:none;" name="sp10"/>
+<div>
+<input id="p8" value="<الاجابه>" type="submit"/>
+</div>
+</form>
+</div>
+
+<script>
+//dq={ap:"@model",ans:"@model.qv.ans"}
+
+dq={q10:"@model.qv.q10",q0:"@model.qv.q0",q1:"@model.qv.q1",ans:"@model.qv.ans"};
+//d1=Array();
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+
+d1=dq
+b0=document.getElementById('b0');
+b1=document.getElementById('b1');
+s8=document.getElementById('s8');
+b0.innerHTML=""+d1.q0;
+b1.innerHTML=""+d1.q1;
+c=Array();
+
+
+c[0]=0;
+c[1]=1;
+
+ st=""+c[0]+""+c[1];
+s8.value=st;
+
+b0.onclick=function(){
+t1=b0.innerHTML;
+b0.innerHTML=b1.innerHTML;
+b1.innerHTML=t1;
+
+t=c[0];
+c[0]=c[1];
+c[1]=t;
+st=""+c[0]+""+c[1];
+s8.value=st;
+
+}
+b1.onclick=function(){   
+
+t1=b1.innerHTML;
+b1.innerHTML=b0.innerHTML;
+b0.innerHTML=t1;
+
+t=c[1];
+c[1]=c[0];
+c[0]=t;
+st=""+c[0]+""+c[1];
+s8.value=st;
+
+}
+
+</script>
+</body>
+</html>
