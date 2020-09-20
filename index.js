@@ -38,6 +38,11 @@ d4={n1:app.get('n1'),ov:1,h:1,s:1,t:1,l:1};
 
 ////////////////////////////
 
+app.get('/p13',function(req,res){
+
+  res.render('p13');
+});
+
 function readfljson(j){
   let da1;
   da1= fs.readFileSync( j,'utf-8') ;
@@ -196,14 +201,16 @@ res.render('p0',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
 app.post('/p1',function(req,res){
 
   currjson=d1[itr1].k;
-  if(itr1>d1.length)itr1=0;
+
 
   if((req.body.btn11==d1[itr1].r)||(req.body.btn12==d1[itr1].r))
-  {itr1++;
+  {
     b=true;}
  else{
  b=false;
 }
+itr1++;
+if(itr1>d1.length)itr1=0;
 
 calc11();
 
@@ -213,8 +220,12 @@ res.redirect('/p2');
 app.post('/p2',function(req,res){
   currjson=d1[itr1].k;
   if(req.body.word1==d2[itr2].qtoken)
-  {itr2++;b=true;}
-  if(itr2>d2.length)itr2=0;
+  {
+    b=true;}
+    itr2++;
+
+    if(itr2>d2.length)itr2=0;
+
   calc11();
   res.render('p3',{qv:d2[itr2],ans:b});
 });
@@ -224,12 +235,14 @@ app.post('/p2',function(req,res){
 app.post('/p3',function(req,res){
   currjson=d1[itr1].k;
   if((req.body.c1==d3[itr3].c)||(req.body.c2==d3[itr3].c)||(req.body.c3==d3[itr3].c)||(req.body.c4==d3[itr3].c))
-  {itr3++;
-    if(itr3>d3.length)itr3=0; 
+  {
+    
     b=true;}
  else{
  b=false;
 }
+itr3++;
+    if(itr3>d3.length)itr3=0; 
 calc11();
 
 res.redirect('/p7');
@@ -274,13 +287,14 @@ app.post('/p7',function(req,res){
     {
       b=true;
 
-      itr7+=1;}
+    }
     else 
 {    b=false;
 
 }   
-if(itr7>=d7.length){itr7=0;
-}  
+itr7+=1;
+
+if(itr7>=d7.length){itr7=0;}  
 calc11();
 
 res.redirect('/p8');
@@ -290,13 +304,15 @@ app.post('/p8',function(req,res){
   currjson=d1[itr1].k;
 
   if(req.body.sp8==d8[itr8].q8)
-{itr8+=1;
+{
   b=true;
 }
  else 
 {
   b=false;
 } 
+itr8+=1;
+
 if(itr8>=d8.length)itr8=0;
 calc11();
 
@@ -307,13 +323,15 @@ app.post('/p9',function(req,res){
   currjson=d1[itr1].k;
   lq1=req.body.sp9;
 if(lq1==d9[itr9].ans)
-{itr9+=1;
+{
   b=true;
 }
  else 
 { 
   b=false;
 } 
+itr9+=1;
+
 if(itr9>=d9.length)itr9=0;
 calc11();
 
@@ -326,9 +344,8 @@ app.post('/p10',function(req,res){
   currjson=d1[itr1].k;
 
   lq1=req.body.sp10;
-  if(itr100>=d10.length)itr100=0;
   if(lq1==d10[itr100].ans)
-  {itr100+=1;
+  {
     b=true;
       }    else
 { 
@@ -336,6 +353,10 @@ app.post('/p10',function(req,res){
   b=false;
 
 }   
+itr100+=1;
+
+if(itr100>d10.length)itr100=0;
+
 calc11();
 
 res.redirect('/p11');
@@ -344,12 +365,14 @@ res.redirect('/p11');
 app.post('/p11',function(req,res){
   currjson=d1[itr1].k;
   if(req.body.sp11==d11[itr111].ans)
-{ itr111+=1;
+{ 
   b=true;
 }
 else 
   b=false;
- if(itr111>d11.length)itr111=0;
+  itr111+=1;
+
+  if(itr111>d11.length)itr111=0;
  calc11();
  res.redirect('/p12');
 });
@@ -358,12 +381,13 @@ app.post('/p12',function(req,res){
   currjson=d1[itr1].k;
   
   if((req.body.c1==d12[itr12].c))
-    {itr12++;
+    {
       b=true;
     }
     else {
     b=false;}
-      if(itr12>d12.length)
+    itr12++;
+    if(itr12>d12.length)
       itr12=0; 
       calc11();
 
@@ -372,4 +396,3 @@ app.post('/p12',function(req,res){
 //////////////////////////////////server go  
 app.listen(process.env.PORT||5000);
 /////////////////////////fine
-

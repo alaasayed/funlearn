@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>p13
+</title>
+</head>
+<body>
+<div class="container" id="container">
+<a href="/p0">عوده</a>
+
+<div>
+<img  id="bfly" src="./../imgsdir/bfly.PNG" style="width:20%;height:50%;"/>
+<span id="num0" style="width:70%;height:50%;">سورة النبأ</span>
+</div>
+<audio  id="audio1"   src="./../audio/S81.m4a"></audio>
+<img id="num1" style="width:80%;height:80%;" src="./../imgsdir/elnaba2/Slide1.PNG"/>
+
+
+</div>
+<script>
+var n=11;
+var i=1;
+
+function chng(){
+    i=i+1;
+    if(i>n)i=n;
+    k=i;
+document.getElementById("num1").setAttribute('src',"./../imgsdir/elnaba2/Slide"+k+".PNG");
+}
+
+function in1(){
+//setTimeout(chng,7000);
+setInterval(chng,7000);
+
+//document.getElementById().animate()
+//document.getElementById("audio1").src='./../audio/s82.m4a';
+
+}
+
+function aud11(){
+document.getElementById("audio1").play();
+
+}
+window.onready=aud11;
+in1();
+</script>
+
+</body>
+</html>
