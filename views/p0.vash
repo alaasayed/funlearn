@@ -53,6 +53,8 @@ var i=0;
 var k=true;
 lesson11="@model.lessons"
 var g11 = document.getElementById("menu");
+g11.style.display='none';
+
 function sh(){
 if(k==false)
 k=true;
@@ -65,6 +67,8 @@ g11.style.display='none';
 }
 k1=true;
 var gl11 = document.getElementById("d1");
+gl11.style.display='none';
+
 function kl(){
 if(k1==false)
 k1=true;
