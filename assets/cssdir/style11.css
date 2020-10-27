@@ -1,5 +1,4 @@
 .container{
-    background-color:lightcyan;
     direction: rtl;
 
 }
@@ -46,19 +45,21 @@ span{
 direction: rtl;
 }
 
-button{
-    
-    background-color: rgba(243, 0, 150, 0.822);
+button,.b1{
+    background-color:rgba(240, 240, 250, 0.6);
     border-top-left-radius: 71%;
     border-bottom-right-radius: 7%;
     text-align: center;
+    border-color:black;
 }
 
-
-input{
-    background-color: indianred;
-    border-radius: 51%;
+input,.inp{
+    background-color:rgba(240, 240, 250, 0.6);
+    border-radius: 71%;
     text-align: center;
+    border-color:black;
+    text-decoration-color: darkviolet;
+    
 }
 
 button:hover{
@@ -84,7 +85,6 @@ input["submit"]:hover{
 }
 
 img:hover{
-border-radius: 81%;
 border-style: dotted;
 
 }
@@ -93,7 +93,7 @@ border-style: dotted;
 
 0%{
     border-style:dotted;
-    border-width:41%;
+    border-width:71%;
     border-color:indianred;
 }
     25%{ 
@@ -122,7 +122,7 @@ border-style: dotted;
 
     100%{
         border-style:dotted;
-        border-width:41%;
+        border-width:71%;
         border-color:indianred;
     }
     

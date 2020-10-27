@@ -38,10 +38,6 @@ d4={n1:app.get('n1'),ov:1,h:1,s:1,t:1,l:1};
 
 ////////////////////////////
 
-app.get('/p13',function(req,res){
-
-  res.render('p13');
-});
 
 function readfljson(j){
   let da1;
@@ -60,7 +56,8 @@ function  getstaticjsons(){
  d10=readfljson('./assets/jsonfdir/' +'j10.json');
  d11=readfljson('./assets/jsonfdir/' +'j11.json');
  d12=readfljson('./assets/jsonfdir/' +'j12.json');
-// d4=readfljson('./assets/jsonfdir/' +'j4.json');
+ d4=readfljson('./assets/jsonfdir/' +'j4.json');
+ d13=readfljson('./assets/jsonfdir/' +'j13.json');
 
  d6nc=readfljson('./assets/jsonfdir/' +'j6nc.json');
  d6cb=d6nc[itr6].wd6;
@@ -76,7 +73,54 @@ return true;
 
 getstaticjsons();
 //var lessons1;
-d4.n1=app.get('n1');
+if(app.get('n1')!=undefined)
+d4.qv.n1=app.get('n1');
+/////#################
+///get requests
+
+app.set('n1','زائرا');
+lo1=false;
+sewar1=[];
+for(var nss=0;nss<d13.length;nss++)
+sewar1[nss]=d13[nss].sura;
+
+
+ikl=0;ik=0;iks=0;ikh=0;
+function eval4()
+{
+ // d4.glessons[ik].title=lessons[ik];
+  //d4.gsura[ikh].title=sewar1[ikh];
+  if(coun[1]>d4.glessons[ik].ct)
+  {d4.glessons[ik].t=(rcoun[1]/coun[1])*100;
+  rcoun[1]=0;coun[1]=0;ik++;
+    }  if(coun[2]>d4.glessons[ikl].cl)
+    {d4.glessons[ikl].l=(rcoun[2]/coun[2])*100;
+    
+  rcoun[2]=0;coun[2]=0;
+    ikl++;
+    }
+  if(coun[3]>d4.glessons[iks].cs)
+    {d4.glessons[iks].s=(rcoun[3]/coun[3])*100;
+    
+  rcoun[3]=0;coun[3]=0;
+    iks++;
+    }
+  if(coun[0]>d4.gsura[ikh].c)
+   { d4.gsura[ikh].g=(rcoun[0]/coun[0])*100;
+    rcoun[0]=0;coun[0]=0;
+ikh++;   
+  }
+    d4.ov+=(d4.gsura[ikh].g+d4.glessons[ik].t+d4.glessons[ikl].l+d4.glessons[iks].s)/400;
+if(ikh>sewar1.length)ikh=0;
+if(ik>lessons.length)ik=0;
+if(ikl>lessons.length)ikl=0;
+if(iks>lessons.length)iks=0;
+
+fs.writeFileSync('./assets/jsonfdir/j4.json',JSON.stringify(d4));
+}
+
+
+
 function calc11(){
   //hefz
   if(currjson==0)
@@ -101,24 +145,22 @@ function calc11(){
 {  coun[3]++;
   if(b==true)
   {rcoun[3]++;}}
-  d4.h=(rcoun[0]/coun[0])*100;
-  d4.t=(rcoun[1]/coun[1])*100;
-  d4.l=(rcoun[2]/coun[2])*100;
-  d4.s=(rcoun[3]/coun[3])*100;
-  d4.ov=(rcoun[1]+rcoun[2]+rcoun[0]+rcoun[3])/(coun[0]+coun[1]+coun[2]+coun[3])*100;
+  
+  eval4();
 }
-/////#################
-///get requests
 
+app.get('/p13',function(req,res){
+  res.render('p13',{n:d13[0].n,sura:d13[0].sura,curraud:d13[0].curraud,suraaud:d13[0].suraaud,sewar:sewar1});
+});
+
+app.post('/p13',function(req,res){
+  res.render('p13',{n:d13[0].n,sura:d13[0].sura,curraud:d13[0].curraud,suraaud:d13[0].suraaud,sewar:sewar1});
+});
 app.get('/',function(req,res){
-if(req.body.nom!=undefined){
-  app.set('n1',req.body.nom);
-  lo1=true;
-  }
-  else{
+if(lo1==false)
   app.set('n1','زائرا');
-  lo1=false;
-  }  
+
+    
 
 let d0v=Array();
 
@@ -126,7 +168,7 @@ for(i=1;i<=d0[2].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/المدود/Slide"+i+".PNG";
 }
 
-res.render('p0',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
+res.render('p0',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons,sewar:sewar1});
 });
 
 app.get('/p1',function(req,res){    
@@ -139,6 +181,8 @@ app.get('/p2',function(req,res){
 app.get('/p3',function(req,res){res.render('p3',{qv:d3[itr3],ans:b});});
 
 app.get('/p4',function(req,res){res.render('p4',{qv:d4});});
+
+
 
 app.get('/p5n',function(req,res){res.render('p5n',{itr5n});});
 
@@ -175,9 +219,9 @@ app.get('/p11',function(req,res){
 
 
 ////////////////////////
-//////////########################
+/////////########################
 /////post requests
-///////////////////////
+//////////////////////
 
 app.post('/',function(req,res){
 var d0v=Array();
@@ -188,16 +232,34 @@ if(req.body.nom!=undefined){
 app.set('n1',req.body.nom);
 lo1=true;
 }
-else{
-app.set('n1','زائرا');
-lo1=false;
-}
+
 for(i=1;i<=d0[c].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
 }
+if(req.body.op1==2)
+res.render('p13',{n:"",sura:"",curraud:"",suraaud:""});
 
-res.render('p0',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
+res.render('p0',{logged:lo1,op1:req.body.op1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
 });
+
+/*
+
+app.post('/ples1',function(req,res){
+  var d0v=Array();
+  var c=0;
+  if(req.body.po1!=undefined)
+  c=req.body.po1;
+  
+  console.log(req.body.po1);
+  
+  for(i=1;i<=d0[c].toc.length;i++){
+    d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
+  }
+  
+  res.render('ples1',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
+  });
+
+*/
 app.post('/p1',function(req,res){
 
   currjson=d1[itr1].k;
@@ -283,7 +345,7 @@ res.render('p6n',{mycurrdate:daync,d7:n7,arr7:n7.arr7});
 
 app.post('/p7',function(req,res){
   currjson=d1[itr1].k;
-  if(req.body.p1==d7[itr7].indx)
+  if(req.body.p1==d7[itr7].ans)
     {
       b=true;
 
