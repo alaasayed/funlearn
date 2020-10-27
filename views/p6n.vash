@@ -1,0 +1,99 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>
+          Tgame
+          </title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+<a href="./p6cb" class="btn btn-info">للخطه</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+<input  type="date" value="@model.mycurrdate" name="currdate" />
+</div>
+</div>
+<div class="row">
+<ul  class="col-xs-4">
+<li>
+      
+ الاخطاء       
+</li>
+@model.arr7.forEach(function(ijk6){
+<li>
+
+@ijk6.error7
+</li>
+})
+
+</ul>
+<ul class="col-xs-4">
+<li>
+التنبيهات           
+
+</li>
+@model.arr7.forEach(function(ijk6){
+<li>
+@ijk6.alert7
+</li>
+})
+</ul></div>
+<form action="/p6n" method="post" >
+<li class="row" >
+<div class="col-xs-12">
+
+المفترض 
+<input    type="text" name="req7" value="req7" />
+</div>
+</li>
+<li class="row" >
+<div class="col-xs-12">
+ما تم
+
+<input  type="text" name="done7" value="done7" />         
+
+</div>
+</li>
+<li class="row">
+
+<div class="col-xs-12">
+الخطأ     
+
+
+<input type="text" name="error7"  />
+</div>
+
+</li>
+<li class="row" >
+
+<div class="col-xs-12">
+التنبيه
+<input type="text" name="alert7" />
+</div>
+</li>
+
+<li class="row">
+
+<div class="col-xs-12">
+
+<input type="submit"  />
+
+</div>
+</li>
+</form>
+<a download="Tgame" href="./../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
+</div>
+
+</body>
+</html>

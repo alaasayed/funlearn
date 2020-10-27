@@ -1,0 +1,87 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>
+            سؤال
+          </title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+
+<h3>بدل بالصحيح لكي تعطي</h3>
+
+<h3>@model.qv.q</h3>
+<h2 id="bq"  style="background-color:gold">@model.qv.lq</h2>
+
+<button  id="b0">*</button>
+<button  id="b1">*</button>
+<button  id="b2">*</button>
+<button  id="b3">*</button>
+<form action='/p9' method='POST'>
+<input id="s9"  style="display:none;" name="sp9"  />
+<input id="p8" value="<>" type="submit"/>
+</form>
+
+<script>
+d1=[{q:"@model.qv.q",lq:"@model.qv.lq",q0:"@model.qv.q0",q1:"@model.qv.q1",q2:"@model.qv.q2",q3:"@model.qv.q3",ans:"@model.qv.ans"}];
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+
+var b0=document.getElementById('b0');
+var b1=document.getElementById('b1');
+var b2=document.getElementById('b2');
+var b3=document.getElementById('b3');
+var bq=document.getElementById('bq');
+
+s8=document.getElementById('s9');
+
+b3.innerHTML=""+d1[0].q3;
+b2.innerHTML=""+d1[0].q2;
+b0.innerHTML=""+d1[0].q0;
+b1.innerHTML=""+d1[0].q1;
+st="";
+b0.onclick=function(){
+bq.innerHTML=b0.innerHTML;
+st=b0.innerHTML;
+s8.value=st;
+
+}
+b1.onclick=function(){   
+bq.innerHTML=b1.innerHTML;
+st=b1.innerHTML;
+s8.value=st;
+
+}
+
+
+b2.onclick=function(){
+bq.innerHTML=b2.innerHTML;
+st=b2.innerHTML;
+s8.value=st;
+
+}
+
+b3.onclick=function(){
+bq.innerHTML=b3.innerHTML;
+st=b3.innerHTML;
+s8.value=st;
+
+}
+
+</script>
+
+</div></div></div>
+</body>
+</html>

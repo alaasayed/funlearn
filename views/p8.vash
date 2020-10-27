@@ -1,0 +1,118 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سؤال</title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+
+<h3>رتب عند بالاختيار لنحصل علي</h3>
+<h2>  @model.qv.q</h2>
+<div>
+<button  id="b0">*</button>
+<button  id="b1">*</button>
+<button  id="b2">*</button>
+<button  id="b3">*</button>
+</div>
+<form action='/p8' method='POST'>
+<input id="s8" style="display:none;"  name="sp8" type="text" />
+<input id="p8" value="<<اجبت>>" type="submit"/>
+</form>
+
+<script>
+d1={q0:"@model.qv.q0",q1:"@model.qv.q1",q2:"@model.qv.q2",q3:"@model.qv.q3",q8:"@model.qv.q8"}
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+
+s81=document.getElementById('s8');
+var b0=document.getElementById('b0');
+var b1=document.getElementById('b1');
+var b2=document.getElementById('b2');
+var b3=document.getElementById('b3');
+b3.innerHTML=""+d1.q3;
+b2.innerHTML=""+d1.q2;
+b0.innerHTML=""+d1.q0;
+b1.innerHTML=""+d1.q1;
+var c=Array();
+
+
+for(var p=0;p<4;p++)
+c[p]=p;
+st=""+c[0]+""+c[1]+""+c[2]+""+c[3];
+s81.setAttribute('value',st);
+
+b0.onclick=function(){
+
+t=c[0];
+c[0]=c[3];
+c[3]=t;
+
+st=""+c[0]+""+c[1]+""+c[2]+""+c[3];
+s81.setAttribute('value',st);
+ 
+
+t1=b0.innerHTML
+b0.innerHTML=b3.innerHTML;
+b3.innerHTML=t1;
+
+}
+b1.onclick=function(){   
+t=c[1];
+c[1]=c[0];
+c[0]=t;
+
+st=""+c[0]+""+c[1]+""+c[2]+""+c[3];
+s81.setAttribute('value',st);
+
+ 
+t1=b1.innerHTML
+b1.innerHTML=b0.innerHTML;
+b0.innerHTML=t1;
+
+}
+b2.onclick=function(){
+t=c[2];
+c[2]=c[1];
+c[1]=t;
+ 
+st=""+c[0]+""+c[1]+""+c[2]+""+c[3];
+s81.setAttribute('value',st);
+
+t1=b2.innerHTML
+b2.innerHTML=b1.innerHTML;
+b1.innerHTML=t1;
+
+}
+
+b3.onclick=function(){
+
+t=c[3];
+c[3]=c[2];
+c[2]=t;
+st=""+c[0]+""+c[1]+""+c[2]+""+c[3];
+s81.setAttribute('value',st);
+
+
+
+t1=b3.innerHTML
+b3.innerHTML=b2.innerHTML;
+b2.innerHTML=t1;
+
+}
+
+</script>
+</div></div></div>
+</body>
+</html>

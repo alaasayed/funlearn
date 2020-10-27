@@ -1,0 +1,145 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>
+            سؤال
+          </title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+ 
+      <div class="container">
+ 
+      <div class="row">
+      <div class="col-xs-12 ">
+<ul class="nav nav-tabs">
+<li>
+<button onclick="sewrfnc()">لفوائد السور
+</button>
+
+</li>
+<li>
+<button onclick="window.location='/';">
+عودة
+ </li>
+ </ul>     
+    
+<ul class="nav nav-tabs nav-vertical">
+<li>
+<form action='/p13' method='post' id="nsewr">
+<input style="display:none;" name="op1" value="2">
+</form>    
+</li>
+</ul>
+</div>
+</div >
+
+      <div class="row">      
+      <div class="col-xs-12 ">
+
+<div>
+<img  id="bfly" src="./../imgsdir/bfly.PNG" style="width:20%;height:20%;"/>
+<span id="num0" style="width:70%;height:50%;">@model.sura</span>
+</div>
+<audio  id="audio1"   src="./../audio/S81.m4a"></audio>
+<img id="num1" style="width:80%;height:80%;" />
+
+<button onclick="suralsn()">اسمع السورة</button>
+</div>
+<script>
+var n=@model.n;
+var i=1;
+sewar11="@model.sewar"
+
+var bfly=document.getElementById('bfly');
+var lftst=parseInt(bfly.style.left.substr(0,bfly.style.left.length-2));
+var gs11 = document.getElementById("nsewr");
+gs11.style.display='none';
+ks=true;
+function sewrfnc(){
+if(ks==false)
+ks=true;
+else ks=false;
+
+if(ks==true)
+{
+
+
+gs11.style.display='block';
+
+
+}
+else
+
+gs11.style.display='none';
+
+
+}
+sewar11=sewar11.split(',');
+
+for(var q=0;q<sewar11.length;q++)
+{
+var b=document.createElement('button');
+var lst=document.createElement('li');
+
+//b.textContent=sewar11[q];    
+b.setAttribute('class','b1 form-control');
+b.innerHTML=sewar11[q];    
+b.setAttribute('name','po2');
+b.setAttribute('value',q);
+b.setAttribute('type','submit');    
+lst.appendChild(b);
+gs11.appendChild(lst);
+
+}
+
+var a11=document.getElementById("audio1");
+
+function suralsn(){
+a11.src="./../imgsdir/fa2da/"+"@model.sura"+"/"+"@model.suraaud";
+a11.play();
+
+}
+
+bfly.style.left="200px";
+
+setInterval(function(){
+cf=(parseInt(bfly.style.left.substr(0,bfly.style.left.length-2))-30);
+bfly.style.left=cf+"px";
+if(parseInt(bfly.style.left.substr(0,bfly.style.left.length-2))<30)
+bfly.style.left=lftst+"px";
+
+},3000);
+
+function chng(){
+    if(i>n)i=n;
+    k=i;
+
+document.getElementById("num1").setAttribute('src',"./../imgsdir/fa2da/"+"@model.sura"+"/Slide"+k+".PNG");
+    i=i+1;
+
+}
+
+function in1(){
+//setTimeout(chng,7000);
+setInterval(chng,7000);
+
+//document.getElementById().animate()
+
+}
+
+function aud11(){
+a11.src="./../imgsdir/fa2da/"+"@model.sura"+"/"+"@model.curraud"
+a11.play();
+
+}
+window.onready=aud11;
+in1();
+</script>
+</div></div></div>
+</body>
+</html>

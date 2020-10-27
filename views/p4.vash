@@ -1,0 +1,94 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>
+            سؤال
+          </title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+
+<h3>اهلا بك @model.qv.n1</h3>
+
+<h2>
+الدرجات  بالنسبة المئوية
+</h2>
+<h2>درجتك العامة </h2>
+<h5>@model.qv.ov  </h5>
+<h2>درجتك في الحفظ </h2>
+@model.qv.gsura.forEach(function(kh){
+
+      <li>
+      @kh.title
+      @kh.g
+      </li>
+} 
+)
+
+<h2>درجتك في المهارات </h2>
+<table>
+<tr>
+<td>
+الدرس
+</td>
+<td>
+
+التجويد 
+</td>
+<td>
+
+
+الاستماع
+
+</td>
+<td>
+
+النطق
+</td>
+
+
+</tr>
+@model.qv.glessons.forEach(function(ik){
+<tr>
+
+<td>
+@ik.title
+</td>
+<td>
+
+@ik.t
+</td>
+<td>
+
+
+@ik.l
+</td>
+
+<td>
+
+@ik.s
+</td>
+</tr>
+
+
+
+}
+)
+</table>
+</div></div>
+</div>
+</body>
+</html>

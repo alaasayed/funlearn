@@ -1,0 +1,113 @@
+<html encoding="utf-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title class="ion-float-right"> الدروس</title>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div class="container">
+<h3>اهلا بك @model.n1</h3>
+
+<ul class="nav nav-tabs">
+
+<li>
+</li>
+<li>
+<a href="/p13">لفوائد السور</a>
+
+</li>
+<li>
+<a href="/p1">للتدريبات</a>
+</li><li> 
+<a href="/p4">للاحصائيات</a>    
+</li><li>
+<a href="/p5n">للاذكار</a>  
+</li><li>
+<a href="/p6cb">لمتابعة الاتقان</a>    
+</li>
+<li>
+<button id="btn11" onclick="kl()">الدروس 
+
+</button>
+
+</li>
+</ul>
+
+<ul class="nav nav-tabs nav-vertical">
+<li>
+<form action='/ples1' method='post' id="n"></form>    
+</li>
+</ul>
+@model.dv2.forEach(function(ijk){
+<img src="@ijk" style="width:78%;hight:27%;">
+})
+
+
+</div>
+
+<script>
+var lesson11=Array();
+var i=0;
+var k=true;
+lesson11="@model.lessons"
+k1=true;
+var gl11 = document.getElementById("n");
+gl11.style.display='none';
+
+function kl(){
+if(k1==false)
+k1=true;
+else k1=false;
+
+if(k1==true)
+gl11.style.display='block';
+else
+gl11.style.display='none';
+}
+
+
+var le;
+
+lesson11=lesson11.split(',');
+
+var gn = document.getElementById("n");
+
+var le;
+
+for(var q=0;q<lesson11.length;q++)
+{
+var b=document.createElement('button');
+//b.textContent=lesson11[q];    
+b.setAttribute('class','form-control  btn-primary');
+b.innerHTML=lesson11[q];    
+b.setAttribute('name','po1');
+b.setAttribute('value',q);
+b.setAttribute('type','submit');    
+gn.appendChild(b);
+
+}
+    </script>
+
+
+
+
+</body>
+
+
+
+<footer>
+معلومات عني
+
+الايميل:
+alaa.sayed4@gmail.com
+
+التليفون:
+01150835220
+
+</footer>
+
+
+</html>

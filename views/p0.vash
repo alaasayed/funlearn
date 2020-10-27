@@ -1,0 +1,330 @@
+<html encoding="utf-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title class="ion-float-right"> الدروس</title>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<!--
+<script   src="./../bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js"/>
+
+<script   src="./../bootstrap-3.4.1-dist/js/bootstrap.min.js"/>
+-->
+
+</head>
+<body>
+
+<script   src="./../bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js"></script>
+
+<script   src="./../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<div class="container"  style="direction: rtl">
+<div class="row">
+
+<div class="col-sm-10 ">
+<div class="aside right-align">اهلا بك @model.n1</div>
+
+
+
+<button class=" b1" data-toggle="modal" data-target="#reg">سجل اسمك</button>
+
+</div>
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="reg"  class="modal " role="dialog" tabindex="2" >
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button  type="button" class=" btn  btn-warning" data-dismiss="modal"  >&lt;X&gt;</button>
+</div>
+<div class="modal-body">
+<form  role="form " class="form-horizontal"  action='/' method="post">
+  <div class="form-group">
+
+  <div class="col-sm-1">
+    
+    <input type="text"  class="inp " name="nom" />
+</div>
+  
+  <div class="col-sm-1">
+
+    <input type="submit" value="ادخل" class="inp"/>
+</div>
+</div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<ul class="list-group">
+<li>
+<h3>
+هذا الموقع هدية لطلاب الحصري خاصة و طلاب حفظ القرآن عامة</h3>
+</li>
+
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+
+ اولا لدروس تجويد الاستاذة نجوي رحمها الله
+<a href="https://www.youtube.com/watch?v=XiI4ZLKhGzg">علي اليوتيوب </a>
+
+</li>
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+<div>
+معلومات مبسطه عن التجويد  
+<button  onclick="kl()">للدروس 
+</button>
+</div>
+</li> 
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+<div>
+ 
+ فوائد بعض السور  
+
+<button onclick="sewrfnc()">لفوائد السور</button>
+ 
+</div>
+</li>
+ <li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+<div >تدريبات تقيم
+ حفظ بعض السور 
+و مهارات سمعيه 
+و  نظريه   
+و  للنطق
+
+<button onclick="window.location='/p1';">
+للتدريب</button>
+
+ </div>
+
+  </li>
+
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+
+<button  onclick="window.location='/p5n';">
+
+للاذكار  
+</button>
+
+</li>
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+صورة ملف لمتابعة الحفظ و الملحوظات  للمحفظ\للمحفظه
+<a href="/p6cb">لمتابعة الاتقان</a>    
+
+</li>
+</ul>
+
+
+<ul class="nav nav-tabs">
+<li>
+<button onclick="sewrfnc()">لفوائد السور</button>
+
+</li>
+<li>
+<button onclick="window.location='/p1';">
+للتدريبات</button>
+
+</li><li>
+<button  onclick="window.location='/p4';">
+ 
+للاحصائيات    
+</button>
+
+</li><li>
+
+<button  onclick="window.location='/p5n';">
+
+للاذكار  
+</button>
+
+</li><li>
+<button onclick="window.location='/p6cb';">
+<a href="/p6cb">لمتابعة الاتقان</a>    
+</button>
+</li>
+<li id="btn11" >
+<button  onclick="kl()">للدروس 
+</button>
+</li>
+</ul>
+<ul class="nav nav-tabs nav-vertical">
+<li>
+<form action='/' method='post' id="n">
+<input style="display:none;" name="op1" value="3">
+</form>    
+</li>
+</ul>
+
+
+<ul class="nav nav-tabs nav-vertical">
+<li>
+<form action='/p13' method='post' id="nsewr">
+<input style="display:none;" name="op1" value="2">
+</form>    
+</li>
+</ul>
+
+
+<div id="menu">
+
+</div>
+
+
+@if(model.op1==3){
+@model.dv2.forEach(function(ijk){
+<img src="@ijk" style="width:78%;hight:27%;">
+})
+}
+</div>
+
+
+<div id="cont"  class="modal " role="dialog" tabindex="2" aria-hidden="true">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<button  type="button" class=" b1 " data-dismiss="modal"  >&lt;X&gt;</button>
+</div>
+<div class="modal-body">
+<form role="form"  class="form-horizontal" method="post" action="/">
+<input  value="ayasayed4@yahoo.com"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+var lesson11=Array();
+var i=0;
+var k=true;
+lesson11="@model.lessons"
+sewar11="@model.sewar"
+
+
+var gs11 = document.getElementById("nsewr");
+gs11.style.display='none';
+ks=true;
+function sewrfnc(){
+if(ks==false)
+ks=true;
+else ks=false;
+
+if(ks==true)
+{
+
+
+gs11.style.display='block';
+
+
+}
+else
+
+gs11.style.display='none';
+
+
+}
+
+var g11 = document.getElementById("menu");
+g11.style.display='none';
+function redir1(r){window.location(r);}
+function sh(){
+if(k==false)
+k=true;
+else k=false;
+
+if(k==true)
+g11.style.display='block';
+else
+g11.style.display='none';
+}
+k1=true;
+var btn11 = document.getElementById("btn11");
+
+var gl11 = document.getElementById("n");
+gl11.style.display='none';
+
+function kl(){
+if(k1==false)
+k1=true;
+else k1=false;
+
+if(k1==true)
+{
+
+gl11.style.left=parseInt(btn11.style.left);
+
+gl11.style.display='block';
+
+
+}
+else
+
+gl11.style.display='none';
+
+
+}
+
+
+var le;
+
+lesson11=lesson11.split(',');
+
+var gn = document.getElementById("n");
+
+var le;
+sewar11=sewar11.split(',');
+
+for(var q=0;q<sewar11.length;q++)
+{
+var b=document.createElement('button');
+var lst=document.createElement('li');
+
+//b.textContent=sewar11[q];    
+b.setAttribute('class','b1 form-control');
+b.innerHTML=sewar11[q];    
+b.setAttribute('name','po2');
+b.setAttribute('value',q);
+b.setAttribute('type','submit');    
+lst.appendChild(b);
+gs11.appendChild(lst);
+
+}
+
+for(var q=0;q<lesson11.length;q++)
+{
+var b=document.createElement('button');
+var lst=document.createElement('li');
+
+//b.textContent=lesson11[q];    
+b.setAttribute('class','b1 form-control');
+b.innerHTML=lesson11[q];    
+b.setAttribute('name','po1');
+b.setAttribute('value',q);
+b.setAttribute('type','submit');    
+lst.appendChild(b);
+gn.appendChild(lst);
+
+}
+    </script>
+
+
+
+
+</body>
+
+
+<footer>
+<button class=" b1" data-toggle="modal" data-target="#cont">للتواصل</button>
+
+</footer>
+
+
+</html>

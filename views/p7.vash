@@ -1,0 +1,44 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>الصوت</title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+
+<h3>مما سمعته:</h3>
+<h4>@model.qv.ql</h4>
+<audio id="a1"  controls="true" autoplay="true" src='./../audio/@model.qv.path'>اسمع</audio>
+
+<form action="/p7" method="POST">
+<input  type="submit" name="p1" id="p1"  value="@model.qv.q1"/>
+<input   type="submit" name="p1" id="p2" value="@model.qv.q2"  />
+<input   type="submit" name="p1"  id="p3" value="@model.qv.q3"/>
+</form>
+
+
+<script>
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+dq="@model.qv.path"
+d='./../audio/'+dq
+a11=document.getElementById('a1');
+a11.setAttribute("src",d);
+
+</script>
+</div></div></div>
+</body>
+</html>
