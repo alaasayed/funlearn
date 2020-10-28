@@ -69,8 +69,8 @@ function  getstaticjsons(){
  }
  
 else{
-  d6cb=d6nc[d6nc.length-1].wd6;
-  d6n=d6nc[d6nc.length-1].d7;
+  d6cb=d6nc[0].wd6;
+  d6n=d6nc[0].d7;
  
  }
  
@@ -428,7 +428,7 @@ app.post('/p6n',function(req,res){
   n7.done7=req.body.done7;
   n7.arr7.push({error7:req.body.error7,alert7:req.body.alert7});
   d6nc.map(function(t,ind){if(t.w==daync)t.d7=n7;else 
-    d6nc.push({w:n6.day6,wd6:[],d7:n7});
+    d6nc.push({w:daync,wd6:[],d7:n7});
   
   });
 fs.writeFileSync('./assets/jsonfdir/j6nc.json',JSON.stringify(d6nc));

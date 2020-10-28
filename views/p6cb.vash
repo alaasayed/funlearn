@@ -16,7 +16,7 @@
       <div class="row">
       <div class="col-xs-12 ">
 <a href="./" class="btn btn-info">عودة</a>
-<a href="/p6n" class="btn btn-info">لمتابعة الملاحظات</a>    
+<a href="./p6n" class="btn btn-info">لمتابعة الملاحظات</a>    
       
     </div>
 </div >
