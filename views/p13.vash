@@ -18,13 +18,20 @@
       <div class="col-xs-12 ">
 <ul class="nav nav-tabs">
 <li>
+<button onclick="window.location='/';">
+عودة
+ </li>
+
+<li>
 <button onclick="sewrfnc()">لفوائد السور
 </button>
 
 </li>
-<li>
-<button onclick="window.location='/';">
-عودة
+
+ <li>
+ <form role="form"  class="form-group form-horizontal" method="post" action="/p13">
+ <input  name="pract" value="للتمرين علي السورة" id="pract" type="submit"/>
+ </form>
  </li>
  </ul>     
     
@@ -51,7 +58,7 @@
 <button onclick="suralsn()">اسمع السورة</button>
 </div>
 <script>
-var n=@model.n;
+var n=@model.qv13.n;
 var i=1;
 sewar11="@model.sewar"
 
@@ -100,7 +107,7 @@ gs11.appendChild(lst);
 var a11=document.getElementById("audio1");
 
 function suralsn(){
-a11.src="./../imgsdir/fa2da/"+"@model.sura"+"/"+"@model.suraaud";
+a11.src="./../imgsdir/fa2da/"+"@model.qv13.sura"+"/"+"@model.qv13.suraaud";
 a11.play();
 
 }
@@ -119,7 +126,7 @@ function chng(){
     if(i>n)i=n;
     k=i;
 
-document.getElementById("num1").setAttribute('src',"./../imgsdir/fa2da/"+"@model.sura"+"/Slide"+k+".PNG");
+document.getElementById("num1").setAttribute('src',"./../imgsdir/fa2da/"+"@model.qv13.sura"+"/Slide"+k+".PNG");
     i=i+1;
 
 }
@@ -133,7 +140,7 @@ setInterval(chng,7000);
 }
 
 function aud11(){
-a11.src="./../imgsdir/fa2da/"+"@model.sura"+"/"+"@model.curraud"
+a11.src="./../imgsdir/fa2da/"+"@model.qv13.sura"+"/"+"@model.qv13.curraud"
 a11.play();
 
 }

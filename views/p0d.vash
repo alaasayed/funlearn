@@ -1,0 +1,119 @@
+<html encoding="utf-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title class="ion-float-right"> الدروس</title>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<!--
+<script   src="./../bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js"/>
+
+<script   src="./../bootstrap-3.4.1-dist/js/bootstrap.min.js"/>
+-->
+
+</head>
+<body>
+
+<script   src="./../bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js"></script>
+
+<script   src="./../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<div class="container"  >
+<div class="row">
+
+<div class="col-xs-10 ">
+
+<button onclick="window.location='/';">
+عودة
+</button>
+<h3 class="aside right-align">اهلا بك @model.n1</h3>
+<h1>
+معلومات مبسطه عن التجويد
+ </h1> 
+
+</div></div>
+
+<div class="row">
+<div class="col-xs-12 ">
+<form role="form"  class="form-group form-horizontal" method="post" action="/p0d">
+ <input  name="pract" value="للتمرين علي الدرس" id="pract" type="submit"/>
+ </form>
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<ul class="nav nav-bar ">
+<li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
+
+<button  onclick="kl()">للدروس 
+</button>
+
+</li>
+
+<li>
+<form action='/p0d' method='post' id="n">
+<input style="display:none;" name="op1" value="3">
+</form>    
+</li></ul>
+</div></div>
+
+<div class="row">
+<div class="col-xs-12">
+
+@model.dv2.forEach(function(ijk){
+<img src="@ijk" style="width:78%;hight:27%;">
+})
+</div></div>
+</div>
+<script>
+
+
+var gn = document.getElementById("n");
+gn.style.display='none';
+var lesson11=Array();
+
+lesson11="@model.lessons"
+i=0;
+k1=true;
+function kl(){
+if(k1==false)
+k1=true;
+else k1=false;
+
+if(k1==true)
+{
+
+//gn.style.left=parseInt(btn11.style.left);
+
+gn.style.display='block';
+
+
+}
+else
+
+gn.style.display='none';
+
+
+}
+lesson11=lesson11.split(',');
+
+for(var q=0;q<lesson11.length;q++)
+{
+var b=document.createElement('button');
+var lst=document.createElement('li');
+
+//b.textContent=lesson11[q];    
+b.setAttribute('class','b1 form-control');
+b.innerHTML=lesson11[q];    
+b.setAttribute('name','po1');
+b.setAttribute('value',q);
+b.setAttribute('type','submit');    
+lst.appendChild(b);
+gn.appendChild(lst);
+
+}
+    </script>
+
+
+</body>
+</html>

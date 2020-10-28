@@ -78,7 +78,13 @@
 <button  onclick="kl()">للدروس 
 </button>
 </div>
-</li> 
+</li>
+
+<li>
+<form action='/p0d' method='post' id="n">
+<input style="display:none;" name="op1" value="3">
+</form>    
+</li>
 <li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
 <div>
  
@@ -88,6 +94,13 @@
  
 </div>
 </li>
+<li>
+<form action='/p13' method='post' id="nsewr">
+<input style="display:none;" name="op1" value="2">
+</form>    
+</li>
+
+
  <li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
 <div >تدريبات تقيم
  حفظ بعض السور 
@@ -120,51 +133,18 @@
 
 <ul class="nav nav-tabs">
 <li>
-<button onclick="sewrfnc()">لفوائد السور</button>
-
-</li>
-<li>
-<button onclick="window.location='/p1';">
-للتدريبات</button>
-
-</li><li>
 <button  onclick="window.location='/p4';">
  
 للاحصائيات    
 </button>
 
-</li><li>
-
-<button  onclick="window.location='/p5n';">
-
-للاذكار  
-</button>
-
-</li><li>
-<button onclick="window.location='/p6cb';">
-<a href="/p6cb">لمتابعة الاتقان</a>    
-</button>
-</li>
-<li id="btn11" >
-<button  onclick="kl()">للدروس 
-</button>
-</li>
-</ul>
-<ul class="nav nav-tabs nav-vertical">
-<li>
-<form action='/' method='post' id="n">
-<input style="display:none;" name="op1" value="3">
-</form>    
 </li>
 </ul>
 
 
 <ul class="nav nav-tabs nav-vertical">
-<li>
-<form action='/p13' method='post' id="nsewr">
-<input style="display:none;" name="op1" value="2">
-</form>    
-</li>
+
+
 </ul>
 
 
@@ -172,12 +152,6 @@
 
 </div>
 
-
-@if(model.op1==3){
-@model.dv2.forEach(function(ijk){
-<img src="@ijk" style="width:78%;hight:27%;">
-})
-}
 </div>
 
 
@@ -232,10 +206,10 @@ gs11.style.display='none';
 
 }
 
-var g11 = document.getElementById("menu");
-g11.style.display='none';
+//var g11 = document.getElementById("menu");
+//g11.style.display='none';
 function redir1(r){window.location(r);}
-function sh(){
+/*function sh(){
 if(k==false)
 k=true;
 else k=false;
@@ -244,9 +218,9 @@ if(k==true)
 g11.style.display='block';
 else
 g11.style.display='none';
-}
+}*/
 k1=true;
-var btn11 = document.getElementById("btn11");
+//var btn11 = document.getElementById("btn11");
 
 var gl11 = document.getElementById("n");
 gl11.style.display='none';
@@ -259,7 +233,7 @@ else k1=false;
 if(k1==true)
 {
 
-gl11.style.left=parseInt(btn11.style.left);
+//gl11.style.left=parseInt(btn11.style.left);
 
 gl11.style.display='block';
 

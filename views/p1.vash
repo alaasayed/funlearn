@@ -20,7 +20,8 @@
 </div >
       <div class="row">      
       <div class="col-xs-12 ">
-<h3>@model.qv.q</h3> </div>
+<h3>@model.qv.q</h3>
+ </div>
 </div>
 <form  role="form" class="form-horizontal" action="/p1" method="post">
 

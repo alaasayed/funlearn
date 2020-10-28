@@ -1,11 +1,13 @@
 .container{
     direction: rtl;
+    background-image: url("../imgsdir/bgr.png");
+    background-repeat: no-repeat;
 
 }
 h3{
     color:floralwhite;
     background-color: darkviolet;
-    border-radius: 21%;
+    border-radius: 11%;
     text-align: center;
     
     animation: anim1 11s   ease;
@@ -15,13 +17,18 @@ h3{
 
 h2{
     background-color:fuchsia;
-    border-radius: 21%;
+    border-radius: 11%;
     text-align: center;
     
 }
+
+.rtl{
+direction: rtl;
+}
+
 h1{
     background-color: mediumorchid;
-    border-radius: 5%;
+    border-radius: 11%;
     text-align: center;
 }
 li{
@@ -30,7 +37,6 @@ li{
 }
 div{
     direction: rtl;
-    border-radius: 21%;
     text-align: right;
     display: inline;
     margin: 4%;
@@ -53,7 +59,7 @@ button,.b1{
     border-color:black;
 }
 
-input,.inp{
+.inp{
     background-color:rgba(240, 240, 250, 0.6);
     border-radius: 71%;
     text-align: center;
@@ -72,7 +78,6 @@ button:hover{
 
 input["submit"]{
     background-color: hotpink;
-    border-radius: 51%;
     text-align: center;
 animation: anim1 11s   ease;
     
@@ -86,13 +91,18 @@ input["submit"]:hover{
 
 img:hover{
 border-style: dotted;
-
 }
+img{
+
+    display: block;margin-left: auto;margin-right: auto;
+}
+
+
 
 @keyframes anim1{
 
 0%{
-    border-style:dotted;
+    border-style:dashed;
     border-width:71%;
     border-color:indianred;
 }
@@ -105,7 +115,7 @@ border-style: dotted;
     50%{
 
         
-    border-style:dotted;
+    border-style:dashed;
     border-width:91%;
     border-color: gold;
     
@@ -121,7 +131,7 @@ border-style: dotted;
 
 
     100%{
-        border-style:dotted;
+        border-style:dashed;
         border-width:71%;
         border-color:indianred;
     }
