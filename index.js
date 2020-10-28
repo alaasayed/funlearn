@@ -277,12 +277,12 @@ app.get('/p11',function(req,res){
   app.get('/p6n',function(req,res){
   //d6nc.push({w:daync,wd6:[],d7:{}});
     
-    res.render('p6n',{mycurrdate:daync,arr7:d6n.arr7,d7:d6n});});
+    res.render('p6n',{n1:app.get('n1'),mycurrdate:daync,arr7:d6n.arr7,d7:d6n});});
 
   app.get('/p6cb',function(req,res){
   d6nc.push({w:daync,wd6:[],d7:{}});
     
-    res.render('p6cb',{mycurrdate:daync,d7:d6cb,g1:gom3a});});
+    res.render('p6cb',{n1:app.get('n1'),mycurrdate:daync,d7:d6cb,g1:gom3a});});
     app.get('/p12',function(req,res){
       res.render('p12',{qv:d12[itra.itr12],ans:b});
     });
@@ -420,7 +420,7 @@ app.post('/p6cb',function(req,res){
     });
     
 fs.writeFileSync('./assets/jsonfdir/j6nc.json',JSON.stringify(d6nc));
-res.render('p6cb',{mycurrdate:n6.day6,d7:d6cbvv,g1:gom3a});
+res.render('p6cb',{n1:app.get('n1'),mycurrdate:n6.day6,d7:d6cbvv,g1:gom3a});
 });
 
 app.post('/p6n',function(req,res){
@@ -432,7 +432,7 @@ app.post('/p6n',function(req,res){
   
   });
 fs.writeFileSync('./assets/jsonfdir/j6nc.json',JSON.stringify(d6nc));
-res.render('p6n',{mycurrdate:daync,d7:n7,arr7:n7.arr7});
+res.render('p6n',{n1:app.get('n1'),mycurrdate:daync,d7:n7,arr7:n7.arr7});
 });
 
 app.post('/p7',function(req,res){

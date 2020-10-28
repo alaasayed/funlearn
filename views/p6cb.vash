@@ -22,6 +22,9 @@
 </div >
       <div class="row">      
       <div class="col-xs-12 ">
+     <h5>للطالب\للطالبه
+      @model.n1
+      </h5>
           <h2>
           
           تابع الخطه
@@ -87,7 +90,7 @@
           </li >}
 <input class="input energized" type="submit" value="حفظ"  />         
 </form>
-<a download="Tgame" href="/../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
+<a download="Tgame+@model.n1" href="/../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
 </div>
 </div></div>
 </body>

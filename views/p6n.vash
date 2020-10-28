@@ -21,6 +21,9 @@
 </div >
       <div class="row">      
       <div class="col-xs-12 ">
+      <h5>للطالب\للطالبه
+      @model.n1
+      </h5>
 <input  type="date" value="@model.mycurrdate" name="currdate" />
 </div>
 </div>
@@ -92,7 +95,7 @@
 </div>
 </li>
 </form>
-<a download="Tgame" href="./../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
+<a download="Tgamen+@model.n1" href="./../jsonfdir/j6nc.json">  يجب حفظ المتابعه للمعلم</a>
 </div>
 
 </body>
