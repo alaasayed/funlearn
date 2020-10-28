@@ -60,9 +60,23 @@ function  getstaticjsons(){
  d13=readfljson('./assets/jsonfdir/' +'j13.json');
 
  d6nc=readfljson('./assets/jsonfdir/' +'j6nc.json');
- d6cb=d6nc[itra.itr6].wd6;
- d6n=d6nc[itra.itr6].d7;
+ d6nc.map(function(t,indx){
+   if(t.w==daync)
+ {
+  d6cb=d6nc[indx].wd6;
+  d6n=d6nc[indx].d7;
+ 
+ }
+ 
+else{
+  d6cb=d6nc[d6nc.length-1].wd6;
+  d6n=d6nc[d6nc.length-1].d7;
+ 
+ }
+ 
 
+  });
+ 
 
 
 for(i=0;i<d0.length;i++)
