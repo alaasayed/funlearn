@@ -34,9 +34,9 @@
 
 <div class="row">
 <div class="col-xs-12 ">
-<form role="form"  class="form-group form-horizontal" method="post" action="/p0d">
- <input  name="pract" value="للتمرين علي الدرس" id="pract" type="submit"/>
- </form>
+<form  method="post" action="/p0d" role="form"  class="form-group form-horizontal">
+<input  name="pract" value="للتمرين علي الدرس" type="submit"/>
+</form>
  
 </div>
 </div>
@@ -105,7 +105,7 @@ var lst=document.createElement('li');
 //b.textContent=lesson11[q];    
 b.setAttribute('class','b1 form-control');
 b.innerHTML=lesson11[q];    
-b.setAttribute('name','po1');
+b.setAttribute('name','po2');
 b.setAttribute('value',q);
 b.setAttribute('type','submit');    
 lst.appendChild(b);

@@ -1,0 +1,72 @@
+<html encoding="utf-8">
+<header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>
+            سؤال
+          </title>
+<link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet"  href="./../cssdir/style11.css"/>
+
+          
+      </header>
+      <body>
+      <div class="container">
+      <div class="row">
+      <div class="col-xs-12 ">
+<a href="./" class="btn btn-info">عودة</a>
+      
+    </div>
+</div >
+      <div class="row">      
+      <div class="col-xs-12 ">
+      
+      <h3>قل:</h3>
+      <h3 id="lblqt" > @model.qv.qtext </h3>
+       <button  id="start11" onclick="mrec.start();"> ابدأ التسجيل
+  </button>
+  <label class="form-control">
+  انت قلت:
+
+
+<div  class="output"></div>
+
+  </label>
+  <form method="post" action="/p222">
+<button onclick="stoprec()" type="submit">اوقف التسحيل</button>
+
+<input type="text"  name="prec2" style="display:none;" id="url12"/>
+</form>
+<form action="/p222" role="form" class="form-horizontal" method="post">
+<input type="text" style="display:none;"   name="word1"/>
+<input type="submit"  value="<<التالي>>"  />
+</form>
+</div></div>
+</div>
+<script>
+if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+</script>
+<script src="./../jsdir/stt.js" />
+<script>
+var diagnostic = document.querySelector('.output');
+var io1 = document.getElementByName('word1');
+io1.setAtrribute('value',diagnostic.innerHTML);
+//////////////////////
+var recchunck
+var opts={mimeType:"audio/flac"}
+mrec=new MediaRecorder(options);
+mrec.ondataavailable=function(d){
+    if(d.data.size>0)
+recchunck.push(d.data);
+}
+function stoprec(){
+mrec.stop();
+blob1= new Blob(recchunck,{type:"audio/flac"});
+url1=URL.createObjectURL(blob1);
+document.getElementByid('url12').value=url1;
+
+}
+</script>
+
+</body>
+</html>

@@ -3,8 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
           <title>
-            سؤال
-          </title>
+            فائده          </title>
 <link rel="stylesheet"  href="./../bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
 <link rel="stylesheet"  href="./../cssdir/style11.css"/>
 
@@ -52,9 +51,10 @@
 <img  id="bfly" src="./../imgsdir/bfly.PNG" style="width:20%;height:20%;"/>
 <span id="num0" style="width:70%;height:50%;">@model.sura</span>
 </div>
-<audio  id="audio1"   src="./../audio/S81.m4a"></audio>
 <img id="num1" style="width:80%;height:80%;" />
-
+<h1>@model.qv13.text13</h1>
+<iframe align="center" src="@model.qv13.suraaud" width="50%" height="497" ></iframe> 
+<iframe align="center" src="@model.qv13.url13" width="90%" height="68%" ></iframe> 
 <button onclick="suralsn()">اسمع السورة</button>
 </div>
 <script>
@@ -96,7 +96,7 @@ var lst=document.createElement('li');
 //b.textContent=sewar11[q];    
 b.setAttribute('class','b1 form-control');
 b.innerHTML=sewar11[q];    
-b.setAttribute('name','po2');
+b.setAttribute('name','po13');
 b.setAttribute('value',q);
 b.setAttribute('type','submit');    
 lst.appendChild(b);
@@ -138,14 +138,15 @@ setInterval(chng,7000);
 //document.getElementById().animate()
 
 }
-
+/*
 function aud11(){
 a11.src="./../imgsdir/fa2da/"+"@model.qv13.sura"+"/"+"@model.qv13.curraud"
 a11.play();
 
 }
-window.onready=aud11;
-in1();
+*/
+//window.onready=aud11;
+in1();//
 </script>
 </div></div></div>
 </body>

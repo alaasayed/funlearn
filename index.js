@@ -1,3 +1,4 @@
+
 var http = require('http');
 //var request = require('request');
 
@@ -174,10 +175,12 @@ app.get('/p13',function(req,res){
   res.render('p13',{qv13:d13[0],sewar:sewar1});
 });
 
+
+v13=0;
+
 app.post('/p13',function(req,res){
-  v13=0;
-  if(req.body.po2!=undefined)
-  v13=req.body.po2;
+  if(req.body.po13!=undefined)
+  v13=req.body.po13;
   if(req.body.pract!=undefined){
  v11=ngles+(v13*13);
  itra.itr1=v11;
@@ -189,14 +192,14 @@ res.render('p13',{qv13:d13[v13],sewar:sewar1});
 app.get('/',function(req,res){
 
     
-
+/*
 let d0v=Array();
 
 for(i=1;i<=d0[2].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/المدود/Slide"+i+".PNG";
-}
-
-res.render('p0',{logged:lo1,n1:app.get('n1'),dv2:d0v,lessons:lessons,sewar:sewar1});
+}*/
+//,dv2:d0v
+res.render('p0',{logged:lo1,n1:app.get('n1'),lessons:lessons,sewar:sewar1});
 });
 app.get('/p0d',function(req,res){
  
@@ -211,23 +214,31 @@ for(i=1;i<=d0[2].toc.length;i++){
   res.render('p0d',{dv2:d0v,lessons:lessons,n1:app.get('n1')});
 });
 
+var c=0;v11=0;
 
 app.post('/p0d',function(req,res){
 var d0v=Array();
-var c=0;v11=0;
-if(req.body.po1!=undefined)
-c=req.body.po1;
-if(req.body.pract!=undefined){
- if(c==1) v11=13;
-  else  v11=13+((c-1)*10);
- itra.itr1=v11;
-res.redirect('p1');  
- }
+if(req.body.po2!=undefined)
+{
+c=req.body.po2;
+}
+console.log("pract"+req.body.pract);
+
+
 for(i=1;i<=d0[c].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
 }
 
+if(req.body.pract!=undefined)
+{ if(c==0)v11=0; 
+ else if(c==1) v11=14;
+  else  v11=14+((c-1)*10);
+ itra.itr1=v11;
+//res.render('p1',{qv:d1[v11],ans:b,itrall1:v11,cnom:app.get('n1')});
+res.redirect('/p1'); 
+}
 
+else
 res.render('p0d',{dv2:d0v,lessons:lessons,n1:app.get('n1')});
 
 });
@@ -237,10 +248,10 @@ app.get('/p1',function(req,res){
   if(itra.itr1>d1.length)itra.itr1=0;
 
   bv1=d1[itra.itr1];
-  res.render('p1',{qv:bv1,ans:b});});
-app.get('/p2',function(req,res){
+  res.render('p1',{qv:bv1,ans:b,itrall1:itra.itr1,cnom:app.get('n1')});});
+app.get('/p2',function(req,res){ res.render('p2',{qv:d2[itra.itr2],ans:b})});
   
-  res.render('p2',{qv:d2[itra.itr2],ans:b})});
+app.get('/p222',function(req,res){ res.render('p222',{qv:d2[itra.itr2],ans:b})});
 
 app.get('/p3',function(req,res){res.render('p3',{qv:d3[itra.itr3],ans:b});});
 
@@ -296,23 +307,14 @@ app.get('/p11',function(req,res){
 
 app.post('/',function(req,res){
 var d0v=Array();
-var c=0;
-if(req.body.po1!=undefined)
-c=req.body.po1;
 if(req.body.nom!=undefined){
 app.set('n1',req.body.nom);
+itra.nom=app.get('n1');
 lo1=true;
 }
-if(req.body.pract!=undefined){
-  
-  if(c==0)
-  v11=0;
-  else if(c==1) v11=13;
-  else v11=13+(c*10)-10;
- itra.itr1=v11;
-res.redirect('p1');  
-     //res.render('p1',{qv:d1[v11],ans:b});
- }
+c=0;
+if(req.body.po1!=undefined)
+c=req.body.po1;
 for(i=1;i<=d0[c].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
 }
@@ -320,7 +322,8 @@ if(req.body.op1==2){
   v=d13[req.body.po2];
 res.render('p13',{qv13:v,sewar:sewar1});
 }
-res.render('p0',{logged:lo1,op1:req.body.op1,n1:app.get('n1'),dv2:d0v,lessons:lessons});
+//dv2:d0v,
+res.render('p0',{logged:lo1,op1:req.body.op1,n1:app.get('n1'),lessons:lessons});
 });
 
 /*
@@ -344,7 +347,7 @@ app.post('/ples1',function(req,res){
 app.post('/p1',function(req,res){
 
   currjson=d1[itra.itr1].k;
-
+    
 
   if((req.body.btn11==d1[itra.itr1].r)||(req.body.btn12==d1[itra.itr1].r))
   {
@@ -352,13 +355,14 @@ app.post('/p1',function(req,res){
  else{
  b=false;
 }
-itra.itr1++;
+itra.itr1+=1;
 if(itra.itr1>d1.length)itra.itr1=0;
 
 calc11();
 
-res.redirect('/p2');
+res.redirect('/p222');
 });
+
 
 app.post('/p2',function(req,res){
   currjson=d1[itra.itr1].k;
@@ -374,6 +378,22 @@ app.post('/p2',function(req,res){
 });
 
 
+app.post('/p222',function(req,res){
+
+http.request('https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/b165e08d-b8a2-43ab-8f4f-b5f3c12813b3/v1/recognize',{headers:"'Content-Type':'audio/flac'",body:"'apikey':'6ESutRjKk-GPrua4dKpMzyw-R6cYYIqtL_y5LS6BDKkI' ;'data-binary':req.body.prec2",function(q,s)
+{
+if(s.body.results[1].transcript==d2[itra.itr2].qtoken)
+{
+  b=true;}
+  itra.itr2++;
+
+  if(itra.itr2>d2.length)itra.itr2=0;
+
+calc11();
+res.render('p3',{qv:d2[itra.itr3],ans:b});
+}});
+
+});
 
 app.post('/p3',function(req,res){
   currjson=d1[itra.itr1].k;

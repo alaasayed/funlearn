@@ -34,14 +34,25 @@
       <div class="form-control col-sm-12  col-xs-12 col-md-12 col-lg-12 ">
 
 <input name="btn12" class=" form-control input-lg " type="submit" value="@model.qv.ch2"/>                    
+
 </div>
 </div>
+<input name="vcnom" value="@model.cnom" type="text" style="display:none"/>
+<input name="vccurr" value="@model.itrall1" type="text" style="display:none"/>
 
 </form>
 </div>
 
 <script>
 if(@model.ans==true)alert('احسنت');else alert('حاول في مره قادمه'); 
+vccurr="@model.itrall1"
+//valc1=valc1.split(",");
+//console.log(valc1);
+vcnom="@model.cnom"
+now11=new Date();
+now11.setYear(now11.getYear()+3)
+cokkival="cnom=vcnom;ccurr=vccurr;expire=now11;";
+document.cooki=cokkival;
 
 </script>
 

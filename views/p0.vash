@@ -63,7 +63,7 @@
 <ul class="list-group">
 <li>
 <h3>
-هذا الموقع هدية لطلاب الحصري خاصة و طلاب حفظ القرآن عامة</h3>
+هذا الموقع هدية لطلاب  اساسيات علم التجويد و حفظ القرآن</h3>
 </li>
 
 <li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
@@ -81,7 +81,7 @@
 </li>
 
 <li>
-<form action='/p0d' method='post' id="n">
+<form  action='/p0d' method='post' id="n">
 <input style="display:none;" name="op1" value="3">
 </form>    
 </li>
@@ -107,10 +107,10 @@
 و مهارات سمعيه 
 و  نظريه   
 و  للنطق
-
-<button onclick="window.location='/p1';">
+<form action="/p1" method="get">
+<button type="submit" value="tg11" name="tg11">
 للتدريب</button>
-
+</form>
  </div>
 
   </li>
@@ -264,7 +264,7 @@ var lst=document.createElement('li');
 //b.textContent=sewar11[q];    
 b.setAttribute('class','b1 form-control');
 b.innerHTML=sewar11[q];    
-b.setAttribute('name','po2');
+b.setAttribute('name','po1');
 b.setAttribute('value',q);
 b.setAttribute('type','submit');    
 lst.appendChild(b);
@@ -280,7 +280,7 @@ var lst=document.createElement('li');
 //b.textContent=lesson11[q];    
 b.setAttribute('class','b1 form-control');
 b.innerHTML=lesson11[q];    
-b.setAttribute('name','po1');
+b.setAttribute('name','po2');
 b.setAttribute('value',q);
 b.setAttribute('type','submit');    
 lst.appendChild(b);
