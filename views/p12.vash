@@ -23,7 +23,7 @@
 
 <h3>مما سمعته  من اي مخرج يكون :</h3>
 <h4>@model.qv.ql</h4>
-<audio id="a1"  controls="true" autoplay="true" src='./../audio/@model.qv.path'>اسمع</audio>
+<iframe id="a1"  src='./../audio/@model.qv.path'>اسمع</iframe>
 <form action="/p12"  method="post">
  <span>       <input type="submit" value="4"  name="c1"  class="ca4"    style="background-image:url('/../imgsdir/ca4.jpeg');background-repeat: no-repeat;background-size:100% 100%;width:111px;height:111px;"/>
             <input type="submit" value="3" name="c1"  class ="ca3"     style="background-image:url('/../imgsdir/ca3.jpeg');background-repeat: no-repeat;background-size:100% 100%;width:111px;height:111px;"/>

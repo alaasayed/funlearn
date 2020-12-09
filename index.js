@@ -1,6 +1,5 @@
-
 var http = require('http');
-//var request = require('request');
+var request = require('request');
 
 var fs = require('fs');
 var express=require('express');
@@ -85,12 +84,8 @@ lessons[i]=d0[i].title;
 return true;
 
 }
-
-getstaticjsons();
-//var lessons1;
-/////#################
 ///get requests
-
+getstaticjsons();
 app.set('n1','زائرا');
 lo1=false;
 sewar1=[];
@@ -181,36 +176,36 @@ v13=0;
 app.post('/p13',function(req,res){
   if(req.body.po13!=undefined)
   v13=req.body.po13;
-  if(req.body.pract!=undefined){
+  if(req.body.pract!=undefined)
+  {
  v11=ngles+(v13*13);
  itra.itr1=v11;
-    res.redirect('p1');
+res.redirect('p1');
 }
-
-res.render('p13',{qv13:d13[v13],sewar:sewar1});
+ res.render('p13',{qv13:d13[v13],sewar:sewar1});
 });
 app.get('/',function(req,res){
+if(req.body.vcnom!=undefined && req.body.vccur!=undefined)
+   { itra.itr1=req.body.vccur;
 
-    
+    itra.nom=req.body.vcnom;
+app.set('n1',itra.nom);
+   }
 /*
 let d0v=Array();
 
 for(i=1;i<=d0[2].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/المدود/Slide"+i+".PNG";
-}*/
+}
+*/
 //,dv2:d0v
 res.render('p0',{logged:lo1,n1:app.get('n1'),lessons:lessons,sewar:sewar1});
 });
 app.get('/p0d',function(req,res){
- 
- 
 let d0v=Array();
-
 for(i=1;i<=d0[2].toc.length;i++){
   d0v[i]="/../imgsdir/lessons/المدود/Slide"+i+".PNG";
 }
-
- 
   res.render('p0d',{dv2:d0v,lessons:lessons,n1:app.get('n1')});
 });
 
@@ -225,9 +220,8 @@ c=req.body.po2;
 console.log("pract"+req.body.pract);
 
 
-for(i=1;i<=d0[c].toc.length;i++){
+for(i=1;i<=d0[c].toc.length;i++)
   d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
-}
 
 if(req.body.pract!=undefined)
 { if(c==0)v11=0; 
@@ -251,7 +245,7 @@ app.get('/p1',function(req,res){
   res.render('p1',{qv:bv1,ans:b,itrall1:itra.itr1,cnom:app.get('n1')});});
 app.get('/p2',function(req,res){ res.render('p2',{qv:d2[itra.itr2],ans:b})});
   
-app.get('/p222',function(req,res){ res.render('p222',{qv:d2[itra.itr2],ans:b})});
+app.get('/p222',function(req,res){ res.render('p222',{qv:d2[itra.itr2],ans:b,currt:"...."})});
 
 app.get('/p3',function(req,res){res.render('p3',{qv:d3[itra.itr3],ans:b});});
 
@@ -294,8 +288,7 @@ app.get('/p11',function(req,res){
   d6nc.push({w:daync,wd6:[],d7:{}});
     
     res.render('p6cb',{n1:app.get('n1'),mycurrdate:daync,d7:d6cb,g1:gom3a});});
-    app.get('/p12',function(req,res){
-      res.render('p12',{qv:d12[itra.itr12],ans:b});
+    app.get('/p12',function(req,res){res.render('p12',{qv:d12[itra.itr12],ans:b});
     });
        
 
@@ -306,8 +299,17 @@ app.get('/p11',function(req,res){
 //////////////////////
 
 app.post('/',function(req,res){
-var d0v=Array();
-if(req.body.nom!=undefined){
+
+  if(req.body.vcnom!=undefined && req.body.vccur!=undefined)
+  { itra.itr1=req.body.vccur;
+
+   itra.nom=req.body.vcnom;
+app.set('n1',itra.nom);
+  }
+
+ var d0v=Array();
+if(req.body.nom!=undefined)
+{
 app.set('n1',req.body.nom);
 itra.nom=app.get('n1');
 lo1=true;
@@ -315,9 +317,9 @@ lo1=true;
 c=0;
 if(req.body.po1!=undefined)
 c=req.body.po1;
-for(i=1;i<=d0[c].toc.length;i++){
+for(i=1;i<=d0[c].toc.length;i++)
   d0v[i]="/../imgsdir/lessons/"+d0[c].title+"/Slide"+i+".PNG";
-}
+
 if(req.body.op1==2){
   v=d13[req.body.po2];
 res.render('p13',{qv13:v,sewar:sewar1});
@@ -347,7 +349,13 @@ app.post('/ples1',function(req,res){
 app.post('/p1',function(req,res){
 
   currjson=d1[itra.itr1].k;
-    
+  if(req.body.vcnom!=undefined && req.body.vccur!=undefined)
+  { itra.itr1=req.body.vccur;
+
+   itra.nom=req.body.vcnom;
+app.set('n1',itra.nom);
+  }
+   
 
   if((req.body.btn11==d1[itra.itr1].r)||(req.body.btn12==d1[itra.itr1].r))
   {
@@ -368,30 +376,42 @@ app.post('/p2',function(req,res){
   currjson=d1[itra.itr1].k;
   if(req.body.word1==d2[itra.itr2].qtoken)
   {
-    b=true;}
+    b=true;
     itra.itr2++;
+    calc11();
 
     if(itra.itr2>d2.length)itra.itr2=0;
-
+    res.render('p3',{qv:d2[itra.itr2],ans:b});
+  }
   calc11();
-  res.render('p3',{qv:d2[itra.itr2],ans:b});
+if(req.body.nxt3!=undefined)
+  res.render('p3',{qv:d2[itra.itr3],ans:b});
 });
 
 
 app.post('/p222',function(req,res){
-
-http.request('https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/b165e08d-b8a2-43ab-8f4f-b5f3c12813b3/v1/recognize',{headers:"'Content-Type':'audio/flac'",body:"'apikey':'6ESutRjKk-GPrua4dKpMzyw-R6cYYIqtL_y5LS6BDKkI' ;'data-binary':req.body.prec2",function(q,s)
+cta="...";
+request('https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/b165e08d-b8a2-43ab-8f4f-b5f3c12813b3/v1/recognize',{headers:"'Content-Type':'audio/flac'",body:"'apikey':'6ESutRjKk-GPrua4dKpMzyw-R6cYYIqtL_y5LS6BDKkI' ;'data-binary':req.body.prec2"},function(q,s)
 {
+  cta=JSON.parse(q.body.results)
+  cta=cta[1].transcript;
+
 if(s.body.results[1].transcript==d2[itra.itr2].qtoken)
 {
-  b=true;}
+  b=true;
   itra.itr2++;
+  calc11();
 
   if(itra.itr2>d2.length)itra.itr2=0;
+  res.redirect('/p3');
+}
+});//request()
 
 calc11();
-res.render('p3',{qv:d2[itra.itr3],ans:b});
-}});
+if(req.body.nxt3!=undefined)
+res.redirect('/p3');
+
+else req.render('/p222',{qv:d2[itra.itr2],ans:b,currt:cta});
 
 });
 
@@ -554,7 +574,7 @@ else
 app.post('/p12',function(req,res){
   currjson=d1[itra.itr1].k;
   
-  if((req.body.c1==d12[itra.itr12].c))
+  if(req.body.c1==d12[itra.itr12].c)
     {
       b=true;
     }
@@ -567,6 +587,8 @@ app.post('/p12',function(req,res){
 
       res.redirect('/p1');
   });
+  app.listen(process.env.PORT || 5000);
+
+
 //////////////////////////////////server go  
-app.listen(process.env.PORT||5000);
 /////////////////////////fine

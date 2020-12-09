@@ -48,6 +48,8 @@
 </div>
   
   <div class="col-sm-1">
+<input name="vcnom" type="text" style="display:none"/>
+<input name="vccurr" type="text" style="display:none"/>
 
     <input type="submit" value="ادخل" class="inp"/>
 </div>
@@ -83,6 +85,7 @@
 <li>
 <form  action='/p0d' method='post' id="n">
 <input style="display:none;" name="op1" value="3">
+
 </form>    
 </li>
 <li class="list-group-item     glyphicon glyphicon-star glyphicon-primary glyphicon-lg">
@@ -110,6 +113,9 @@
 <form action="/p1" method="get">
 <button type="submit" value="tg11" name="tg11">
 للتدريب</button>
+<input name="vcnom" type="text" style="display:none"/>
+<input name="vccurr" type="text" style="display:none"/>
+
 </form>
  </div>
 
@@ -181,6 +187,13 @@ var i=0;
 var k=true;
 lesson11="@model.lessons"
 sewar11="@model.sewar"
+
+arrc=document.cooki;
+if( arrc!=undefined && arrc.length>2){
+arrc=arrc.split(';');
+getElementByName('vcnom').value=arrc[0].split('=')[1];
+getElementByName('vccur').value=arrc[1].split('=')[1];
+}
 
 
 var gs11 = document.getElementById("nsewr");

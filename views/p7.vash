@@ -22,7 +22,7 @@
 
 <h3>مما سمعته:</h3>
 <h4>@model.qv.ql</h4>
-<audio id="a1"  controls="true" autoplay="true" src='./../audio/@model.qv.path'>اسمع</audio>
+<iframe id="a1"   src='./../audio/@model.qv.path'>اسمع</iframe>
 
 <form action="/p7" method="POST">
 <input  type="submit" name="p1" id="p1"  value="@model.qv.q1"/>
