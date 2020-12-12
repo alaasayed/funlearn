@@ -1,0 +1,112 @@
+2020-12-09T01:14:31.159627+00:00 heroku[router]: at=info method=GET path="/imgsdir/nm10.png" host=gametajweed.herokuapp.com request_id=0dd6cdf9-5d2d-46e0-ab09-e46a8da54d18 fwd="156.182.64.151" dyno=web.1 connect=1ms service=2ms status=200 bytes=13869 protocol=https
+2020-12-09T01:14:31.171589+00:00 heroku[router]: at=info method=GET path="/imgsdir/nm11.png" host=gametajweed.herokuapp.com request_id=90349d21-c469-4439-94c1-43d1b55638bc fwd="156.182.64.151" dyno=web.1 connect=0ms service=8ms status=200 bytes=9792 protocol=https
+2020-12-09T01:14:31.474375+00:00 heroku[router]: at=info method=GET path="/imgsdir/nm51.png" host=gametajweed.herokuapp.com request_id=c410391b-bb84-418a-a759-1906d74417c0 fwd="156.182.64.151" dyno=web.1 connect=0ms service=2ms status=200 bytes=11592 protocol=https
+2020-12-09T01:14:31.490403+00:00 heroku[router]: at=info method=GET path="/imgsdir/nm81.png" host=gametajweed.herokuapp.com request_id=7ead525b-a739-4db6-8ba3-c64a8bc9aaf4 fwd="156.182.64.151" dyno=web.1 connect=0ms service=7ms status=200 bytes=12096 protocol=https
+2020-12-09T01:14:31.569758+00:00 heroku[router]: at=info method=GET path="/imgsdir/bgr.png" host=gametajweed.herokuapp.com request_id=0a3b4ed2-3a19-4848-8c61-a5fac3f10660 fwd="156.182.64.151" dyno=web.1 connect=2ms service=7ms status=200 bytes=30647 protocol=https
+2020-12-09T01:15:04.496723+00:00 heroku[router]: at=info method=GET path="/" host=gametajweed.herokuapp.com request_id=a7267ea9-4e8c-4398-89a3-c1a3d1900e90 fwd="156.182.64.151" dyno=web.1 connect=2ms service=3ms status=304 bytes=152 protocol=https
+2020-12-09T01:15:04.843630+00:00 heroku[router]: at=info method=GET path="/bootstrap-3.4.1-dist/js/jquery-3.1.1.min.js" host=gametajweed.herokuapp.com request_id=06f274ca-8579-4822-94cb-aa995a4088e1 fwd="156.182.64.151" dyno=web.1 connect=3ms service=3ms status=304 bytes=239 protocol=https
+2020-12-09T01:15:04.871524+00:00 heroku[router]: at=info method=GET path="/bootstrap-3.4.1-dist/js/bootstrap.min.js" host=gametajweed.herokuapp.com request_id=d4c942b9-3bfc-4dad-a0c5-6cfbb42cf4f0 fwd="156.182.64.151" dyno=web.1 connect=0ms service=2ms status=304 bytes=238 protocol=https
+2020-12-09T01:15:04.889207+00:00 heroku[router]: at=info method=GET path="/cssdir/style11.css" host=gametajweed.herokuapp.com request_id=3e007e23-96e2-421e-ab8d-e09bfda9564b fwd="156.182.64.151" dyno=web.1 connect=0ms service=2ms status=200 bytes=2234 protocol=https
+2020-12-09T01:15:04.901918+00:00 heroku[router]: at=info method=GET path="/bootstrap-3.4.1-dist/css/bootstrap.min.css" host=gametajweed.herokuapp.com request_id=34858270-8007-49da-ad10-3297c49e90dd fwd="156.182.64.151" dyno=web.1 connect=0ms service=7ms status=200 bytes=121749 protocol=https
+2020-12-09T01:15:05.732275+00:00 heroku[router]: at=info method=GET path="/imgsdir/bgr.png" host=gametajweed.herokuapp.com request_id=13f3820f-d693-4087-aec1-23f7782ae90b fwd="156.182.64.151" dyno=web.1 connect=0ms service=3ms status=200 bytes=30647 protocol=https
+2020-12-09T01:15:38.072125+00:00 heroku[router]: at=info method=GET path="/p1?tg11=tg11&vcnom=&vccurr=" host=gametajweed.herokuapp.com request_id=d22b5cdc-2bb2-414a-981e-b01dd80874f7 fwd="156.182.64.151" dyno=web.1 connect=0ms service=4ms status=200 bytes=1866 protocol=https
+2020-12-09T01:15:39.763196+00:00 heroku[router]: at=info method=GET path="/cssdir/style11.css" host=gametajweed.herokuapp.com request_id=b12dd4bf-a1f4-4a16-b1ec-5eae129ee4cf fwd="156.182.64.151" dyno=web.1 connect=0ms service=2ms status=200 bytes=2234 protocol=https
+2020-12-09T01:15:39.768415+00:00 heroku[router]: at=info method=GET path="/bootstrap-3.4.1-dist/css/bootstrap.min.css" host=gametajweed.herokuapp.com request_id=18e40ccc-3a02-422a-a35b-0053492202a2 fwd="156.182.64.151" dyno=web.1 connect=0ms service=7ms status=200 bytes=121749 protocol=https
+2020-12-09T01:15:40.302892+00:00 heroku[router]: at=info method=GET path="/imgsdir/bgr.png" host=gametajweed.herokuapp.com request_id=3718b88d-57a9-4cc3-8d32-4ca76a714562 fwd="156.182.64.151" dyno=web.1 connect=0ms service=3ms status=200 bytes=30647 protocol=https
+2020-12-09T01:15:53.745680+00:00 heroku[router]: at=info method=POST path="/p1" host=gametajweed.herokuapp.com request_id=9e387109-1fcf-4418-839f-4e0228684bbb fwd="156.182.64.151" dyno=web.1 connect=0ms service=4ms status=302 bytes=246 protocol=https
+2020-12-09T01:15:56.401493+00:00 heroku[router]: at=info method=GET path="/p222" host=gametajweed.herokuapp.com request_id=2be2a021-12fa-48e5-b9c9-f5fc0f559c20 fwd="156.182.64.151" dyno=web.1 connect=0ms service=16ms status=200 bytes=2025 protocol=https
+2020-12-09T01:15:57.394535+00:00 heroku[router]: at=info method=GET path="/cssdir/style11.css" host=gametajweed.herokuapp.com request_id=3f4df73f-df63-4b58-aa64-5f82aef8d530 fwd="156.182.64.151" dyno=web.1 connect=0ms service=3ms status=200 bytes=2234 protocol=https
+2020-12-09T01:15:57.402527+00:00 heroku[router]: at=info method=GET path="/bootstrap-3.4.1-dist/css/bootstrap.min.css" host=gametajweed.herokuapp.com request_id=be0c598d-621b-493d-ad0c-fdead526032b fwd="156.182.64.151" dyno=web.1 connect=4ms service=5ms status=200 bytes=121749 protocol=https
+2020-12-09T01:15:59.830504+00:00 heroku[router]: at=info method=GET path="/imgsdir/bgr.png" host=gametajweed.herokuapp.com request_id=e6ae239b-d412-48f7-a5ef-f206573a2032 fwd="156.182.64.151" dyno=web.1 connect=0ms service=3ms status=200 bytes=30647 protocol=https
+2020-12-09T01:16:33.141614+00:00 heroku[router]: at=info method=POST path="/p222" host=gametajweed.herokuapp.com request_id=238cb872-bb58-4a7c-8303-87df90de3766 fwd="156.182.64.151" dyno=web.1 connect=0ms service=7ms status=500 bytes=404 protocol=https
+2020-12-09T01:16:33.158194+00:00 app[web.1]: TypeError: req.render is not a function
+2020-12-09T01:16:33.158205+00:00 app[web.1]: at /app/index.js:414:10
+2020-12-09T01:16:33.158207+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2020-12-09T01:16:33.158208+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:137:13)
+2020-12-09T01:16:33.158208+00:00 app[web.1]: at Route.dispatch (/app/node_modules/express/lib/router/route.js:112:3)
+2020-12-09T01:16:33.158209+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2020-12-09T01:16:33.158210+00:00 app[web.1]: at /app/node_modules/express/lib/router/index.js:281:22
+2020-12-09T01:16:33.158210+00:00 app[web.1]: at Function.process_params (/app/node_modules/express/lib/router/index.js:335:12)
+2020-12-09T01:16:33.158211+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/index.js:275:10)
+2020-12-09T01:16:33.158211+00:00 app[web.1]: at /app/node_modules/body-parser/lib/read.js:130:5
+2020-12-09T01:16:33.158212+00:00 app[web.1]: at invokeCallback (/app/node_modules/raw-body/index.js:224:16)
+2020-12-09T01:16:33.710512+00:00 app[web.1]: /app/index.js:396
+2020-12-09T01:16:33.710524+00:00 app[web.1]: cta=JSON.parse(q.body.results)
+2020-12-09T01:16:33.710524+00:00 app[web.1]: ^
+2020-12-09T01:16:33.710525+00:00 app[web.1]: 
+2020-12-09T01:16:33.710525+00:00 app[web.1]: TypeError: Cannot read property 'body' of null
+2020-12-09T01:16:33.710525+00:00 app[web.1]: at Request._callback (/app/index.js:396:20)
+2020-12-09T01:16:33.710528+00:00 app[web.1]: at Request.self.callback (/app/node_modules/request/request.js:185:22)
+2020-12-09T01:16:33.710529+00:00 app[web.1]: at Request.emit (events.js:314:20)
+2020-12-09T01:16:33.710529+00:00 app[web.1]: at Request.<anonymous> (/app/node_modules/request/request.js:1154:10)
+2020-12-09T01:16:33.710530+00:00 app[web.1]: at Request.emit (events.js:314:20)
+2020-12-09T01:16:33.710530+00:00 app[web.1]: at IncomingMessage.<anonymous> (/app/node_modules/request/request.js:1076:12)
+2020-12-09T01:16:33.710531+00:00 app[web.1]: at Object.onceWrapper (events.js:420:28)
+2020-12-09T01:16:33.710531+00:00 app[web.1]: at IncomingMessage.emit (events.js:326:22)
+2020-12-09T01:16:33.710555+00:00 app[web.1]: at endReadableNT (_stream_readable.js:1241:12)
+2020-12-09T01:16:33.710556+00:00 app[web.1]: at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2020-12-09T01:16:33.724912+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2020-12-09T01:16:33.725118+00:00 app[web.1]: npm ERR! errno 1
+2020-12-09T01:16:33.730501+00:00 app[web.1]: npm ERR! tajweedgame@1.0.0 start: `node index`
+2020-12-09T01:16:33.730605+00:00 app[web.1]: npm ERR! Exit status 1
+2020-12-09T01:16:33.730738+00:00 app[web.1]: npm ERR!
+2020-12-09T01:16:33.730819+00:00 app[web.1]: npm ERR! Failed at the tajweedgame@1.0.0 start script.
+2020-12-09T01:16:33.730909+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2020-12-09T01:16:33.744352+00:00 app[web.1]: 
+2020-12-09T01:16:33.744500+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2020-12-09T01:16:33.744575+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2020-12-09T01_16_33_731Z-debug.log
+2020-12-09T01:16:33.835251+00:00 heroku[web.1]: Process exited with status 1
+2020-12-09T01:16:33.878702+00:00 heroku[web.1]: State changed from up to crashed
+2020-12-09T01:16:33.887966+00:00 heroku[web.1]: State changed from crashed to starting
+2020-12-09T01:16:37.221180+00:00 heroku[web.1]: Starting process with command `npm start`
+2020-12-09T01:16:39.515002+00:00 app[web.1]: 
+2020-12-09T01:16:39.515021+00:00 app[web.1]: > tajweedgame@1.0.0 start /app
+2020-12-09T01:16:39.515021+00:00 app[web.1]: > node index
+2020-12-09T01:16:39.515021+00:00 app[web.1]: 
+2020-12-09T01:16:40.144924+00:00 heroku[web.1]: State changed from starting to up
+2020-12-09T01:17:35.629670+00:00 heroku[router]: at=info method=POST path="/p222" host=gametajweed.herokuapp.com request_id=1996bf74-2ec4-498f-8488-2396c9a67aca fwd="156.182.64.151" dyno=web.1 connect=0ms service=42ms status=302 bytes=240 protocol=https
+2020-12-09T01:17:36.094979+00:00 app[web.1]: /app/index.js:396
+2020-12-09T01:17:36.095007+00:00 app[web.1]: cta=JSON.parse(q.body.results)
+2020-12-09T01:17:36.095007+00:00 app[web.1]: ^
+2020-12-09T01:17:36.095008+00:00 app[web.1]: 
+2020-12-09T01:17:36.095008+00:00 app[web.1]: TypeError: Cannot read property 'body' of null
+2020-12-09T01:17:36.095009+00:00 app[web.1]: at Request._callback (/app/index.js:396:20)
+2020-12-09T01:17:36.095010+00:00 app[web.1]: at Request.self.callback (/app/node_modules/request/request.js:185:22)
+2020-12-09T01:17:36.095010+00:00 app[web.1]: at Request.emit (events.js:314:20)
+2020-12-09T01:17:36.095010+00:00 app[web.1]: at Request.<anonymous> (/app/node_modules/request/request.js:1154:10)
+2020-12-09T01:17:36.095010+00:00 app[web.1]: at Request.emit (events.js:314:20)
+2020-12-09T01:17:36.095011+00:00 app[web.1]: at IncomingMessage.<anonymous> (/app/node_modules/request/request.js:1076:12)
+2020-12-09T01:17:36.095011+00:00 app[web.1]: at Object.onceWrapper (events.js:420:28)
+2020-12-09T01:17:36.095011+00:00 app[web.1]: at IncomingMessage.emit (events.js:326:22)
+2020-12-09T01:17:36.095012+00:00 app[web.1]: at endReadableNT (_stream_readable.js:1241:12)
+2020-12-09T01:17:36.095012+00:00 app[web.1]: at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2020-12-09T01:17:36.103244+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path="/p3" host=gametajweed.herokuapp.com request_id=97f937ce-3afe-4530-80f7-f3def4d736e8 fwd="156.182.64.151" dyno=web.1 connect=0ms service=0ms status=503 bytes=0 protocol=https
+2020-12-09T01:17:36.114109+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2020-12-09T01:17:36.114481+00:00 app[web.1]: npm ERR! errno 1
+2020-12-09T01:17:36.123225+00:00 app[web.1]: npm ERR! tajweedgame@1.0.0 start: `node index`
+2020-12-09T01:17:36.123408+00:00 app[web.1]: npm ERR! Exit status 1
+2020-12-09T01:17:36.123613+00:00 app[web.1]: npm ERR!
+2020-12-09T01:17:36.123785+00:00 app[web.1]: npm ERR! Failed at the tajweedgame@1.0.0 start script.
+2020-12-09T01:17:36.123938+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2020-12-09T01:17:36.132699+00:00 app[web.1]: 
+2020-12-09T01:17:36.133033+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2020-12-09T01:17:36.133039+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2020-12-09T01_17_36_125Z-debug.log
+2020-12-09T01:17:36.205825+00:00 heroku[web.1]: Process exited with status 1
+2020-12-09T01:17:36.242411+00:00 heroku[web.1]: State changed from up to crashed
+2020-12-09T01:17:56.529796+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=253cde68-9858-4429-bda3-51913acbbe21 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:18:03.319801+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=a1405fc5-8718-4a09-a5a7-b2732bc70970 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:18:34.123434+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=d11d14ba-04d3-4412-b773-dd1eb5d1f47b fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:18:42.219247+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=6a6f10dd-dc81-474a-8738-8c2cfb0059dc fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:18:46.272467+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=efe2b812-b606-4fc8-840a-1617d9bdd548 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:21:22.414715+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=f541d585-89db-440b-9d60-d9fbccc224e3 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:21:26.444798+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=d2a30a72-e913-4b0c-b2e4-dc83e6b7483c fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:21:32.627923+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=89090a96-434d-460e-a4c9-d727e2ebed21 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:21:36.389616+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gametajweed.herokuapp.com request_id=623c55fa-bd9c-4914-ac1a-6def77a68cd8 fwd="156.182.64.151" dyno= connect= service= status=503 bytes= protocol=https
+2020-12-09T01:31:08.430295+00:00 heroku[web.1]: State changed from crashed to starting
+2020-12-09T01:31:13.476361+00:00 heroku[web.1]: Starting process with command `npm start`
+2020-12-09T01:31:17.428447+00:00 app[web.1]: 
+2020-12-09T01:31:17.428598+00:00 app[web.1]: > tajweedgame@1.0.0 start /app
+2020-12-09T01:31:17.428600+00:00 app[web.1]: > node index
+2020-12-09T01:31:17.428600+00:00 app[web.1]: 
+2020-12-09T01:31:18.759379+00:00 heroku[web.1]: State changed from starting to up
+Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? 

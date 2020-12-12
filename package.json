@@ -37,6 +37,7 @@
     "record": "^0.2.0",
     "request": "^2.88.2",
     "vash": "^0.13.0",
+    "watson-developer-cloud": "^4.0.1",
     "yargs": "^15.4.1"
   }
 }

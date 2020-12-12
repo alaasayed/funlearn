@@ -13,17 +13,32 @@ if(@model.ans==true)alert('احسنت');else alert('حاول في مره قاد�
 
 var recchunck=Array();
 var elem =document.getElementById("iframe11");
-var opts={"mimeType":"audio/flac"};
-mrec=new MediaRecorder(elem,opts);
+//opts={ mime-type:  "audio/flac" };
+var mrec;
+function strtrec(){
+if (navigator.mediaDevices) {
+  console.log('getUserMedia supported.');
+
+  var constraints = { audio: true };
+  var chunks = [];
+
+  navigator.mediaDevices.getUserMedia(constraints)
+  .then(function(stream) {
+
+     mrec = new MediaRecorder(stream);
+//mrec=new MediaRecorder(opts);
 mrec.ondataavailable=function(d){
     if(d.data.size>0)
 recchunck.push(d.data);
+}});}
+
+
 }
 function stoprec(){
-mrec.stop();
+//mrec.stop();
 blob1= new Blob(recchunck,{"type":"audio/flac"});
 url1=URL.createObjectURL(blob1);
-document.getElementById('url12').value=url1;
+document.getElementById('uploaddf').value=url1;
 
 }
 </script>
@@ -40,17 +55,14 @@ document.getElementById('url12').value=url1;
 </div >
       <div class="row">      
       <div class="col-xs-12 ">
-      <canvas id="iframe11"></canvas>
+      <audio id="iframe11"></audio>
       <h3>قل:</h3>
       <h3 id="lblqt" > @model.qv.qtext </h3>
-       <button  id="start11" onclick="mrec.start()"> ابدأ التسجيل
-  </button>
   
-  <form method="post" action="/p222">
-<button onclick="stoprec()" type="submit">اوقف التسحيل</button>
-<input type="text"  name="prec2w" style="display:none;" id="outw"/>
-
-<input type="text"  name="prec2" style="display:none;" id="url12"/>
+  
+  
+  <form  method="post" action="/p2vf">
+<button type="submit">اوقف التسجيل</button>
 </form>
   <label class="form-control">
   انت قلت:
@@ -60,7 +72,7 @@ document.getElementById('url12').value=url1;
 
   </label>
   
-<form action="/p222" role="form" class="form-horizontal" method="post">
+<form action="/p3" role="form" class="form-horizontal" method="get">
 <input type="submit" name="nxt3"  value="<<التالي>>"  />
 </form>
 </div></div>

@@ -166,6 +166,83 @@ function calc11(){
   eval4();
 }
 
+
+
+var SpeechToTextV1 = require('watson-developer-cloud/speech-to-text/v1');
+///npm install watson-developer-cloud
+var speech_to_text = new SpeechToTextV1({
+  username: 'alaa.sayed4@gmail.com',
+  password: '6ESutRjKk-GPrua4dKpMzyw-R6cYYIqtL_y5LS6BDKkI',
+  url: 'https://stream.watsonplatform.net/speech-to-text/api'
+  ,version: 'v1'
+});
+
+var params = {
+  content_type: 'audio/flac'
+};
+
+app.get('/p2vf',function(req,res){
+   res.render('p222',{qv:d2[itra.itr2],ans:true,currt:"...."});
+  });
+
+app.post('/p2vf',function(req,res){
+// Create the stream,
+ 
+const AudioRecorder = require('node-audiorecorder');
+ 
+// Options is an optional parameter for the constructor call.
+// If an option is not given the default value, as seen below, will be used.
+const options = {
+  program: `rec`,     // Which program to use, either `arecord`, `rec`, or `sox`.
+  device: null,       // Recording device to use, e.g. `hw:1,0`
+ 
+  bits: 16,           // Sample size. (only for `rec` and `sox`)
+  channels: 1,        // Channel count.
+  encoding: `signed-integer`,  // Encoding type. (only for `rec` and `sox`)
+  format: `S16_LE`,   // Encoding type. (only for `arecord`)
+  rate: 16000,        // Sample rate.
+  type: `wav`,        // Format type.
+ 
+  // Following options only available when using `rec` or `sox`.
+  silence: 2,         // Duration of silence in seconds before it stops recording.
+  thresholdStart: 0.5,  // Silence threshold to start recording.
+  thresholdStop: 0.5,   // Silence threshold to stop recording.
+  keepSilence: true   // Keep the silence in the recording.
+};
+// Optional parameter intended for debugging.
+// The object has to implement a log and warn function.
+const logger = console;
+ 
+// Create an instance.
+let audioRecorder = new AudioRecorder(options, logger);
+//ar-MS_BroadbandModel
+//zh-CN_BroadbandModel
+audioRecorder.start();
+for(p=0;p<900;p++)p++;
+audioRecorder.stop();
+const recognizeStream = speech_to_text.createRecognizeStream({
+  content_type: 'audio/l16; rate=44100; channels=2',
+  model: 'ar-MS_BroadbandModel',
+  interim_results: true,
+})
+
+var cur2='...';
+var s=audioRecorder.stream();
+
+const textStream = s.pipe(recognizeStream).setEncoding('utf8');
+
+textStream.on('data', function(user_speech_text ){
+
+cur2=user_speech_text;
+if(user_speech_text==d2[itra.itr2].qtoken)
+{itra.itr2++;b=true;}else b=false;
+});
+textStream.on('error', function(e ){ cur2=e});
+ 
+res.render('p222',{qv:d2[itra.itr2],ans:b,currt:cur2});
+
+});
+
 app.get('/p13',function(req,res){
   res.render('p13',{qv13:d13[0],sewar:sewar1});
 });
@@ -368,7 +445,7 @@ if(itra.itr1>d1.length)itra.itr1=0;
 
 calc11();
 
-res.redirect('/p222');
+res.redirect('/p2vf');
 });
 
 
