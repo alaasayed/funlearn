@@ -62,7 +62,7 @@ document.getElementById('uploaddf').value=url1;
   
   
   <form  method="post" action="/p2vf">
-<button type="submit">اوقف التسجيل</button>
+<button type="submit">ابدأ التسجيل</button>
 </form>
   <label class="form-control">
   انت قلت:
