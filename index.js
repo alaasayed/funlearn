@@ -189,7 +189,7 @@ app.use(function(req, res, next) {
   next();
 });
 app.get('/p2vf',function(req,res){
-   res.render('p222',{qv:d2[itra.itr2],ans:true,currt:"...."});
+   res.render('p2vf',{qv:d2[itra.itr2],ans:true,currt:"...."});
   });
 
 app.post('/p2vf',function(req,res){
@@ -245,8 +245,8 @@ if(user_speech_text==d2[itra.itr2].qtoken)
 {itra.itr2++;b=true;}else b=false;
 });
 textStream.on('error', function(e ){ cur2=e});
- 
-res.render('p222',{qv:d2[itra.itr2],ans:b,currt:cur2});
+calc11();
+res.render('p2vf',{qv:d2[itra.itr2],ans:b,currt:cur2});
 
 });
 
