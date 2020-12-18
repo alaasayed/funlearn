@@ -1,6 +1,5 @@
 var http = require('http');
 var request = require('request');
-
 var fs = require('fs');
 var express=require('express');
 var bodyparser=require('body-parser');
@@ -180,7 +179,7 @@ var speech_to_text = new SpeechToTextV1({
 var params = {
   content_type: 'audio/flac'
 };
-
+/*
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -188,6 +187,7 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
+*/
 app.get('/p2vf',function(req,res){
    res.render('p2vf',{qv:d2[itra.itr2],ans:true,currt:"...."});
   });
